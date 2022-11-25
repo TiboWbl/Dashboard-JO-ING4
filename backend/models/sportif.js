@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const movieSchema = new mongoose.Schema({
+const sportifSchema = new mongoose.Schema({
     age: Number,
     nationalite: String,
     nom: String, 
