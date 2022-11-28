@@ -2,10 +2,10 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-          A vous de jouer !
+    <div className="App"> JEUX OLYMPIQUES 
     </div>
   );
 }
 
 export default App;
+
