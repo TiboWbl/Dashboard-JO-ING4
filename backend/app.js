@@ -9,6 +9,18 @@ var usersRouter = require("./routes/users");
 
 var app = express();
 
+const mongoose = require('mongoose');
+
+mongoose.Promise = global.Promise;
+const dbName = 'jo';  // Nom de votre BDD
+const dbUrl = `mongodb://localhost:27017/${dbName}`;
+
+// Connecting to the db
+mongoose.connect(dbUrl, {
+  useNewUrlParser: true
+});
+
+
 app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());
@@ -17,5 +29,6 @@ app.use(cookieParser());
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+
 
 module.exports = app;
