@@ -14,6 +14,6 @@ const sportifSchema = new mongoose.Schema({
 }
 );
 
-const Sportifs = mongoose.model("sportifs", sportifSchema);
+const Sportifs = mongoose.model("Sportifs", sportifSchema);
 
 module.exports =  Sportifs;

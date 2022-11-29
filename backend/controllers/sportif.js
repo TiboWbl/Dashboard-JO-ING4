@@ -13,13 +13,13 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
     const { id } = req.params;
 
-    // Find movie which has [id] name in DB
+    // Find sportif which has [id] name in DB
     Sportif.findOne({ movie: id })
     .then(sportif => {
         if(sportif) {
-            // Return movie
+            // Return sportif
             res.status(200).json({
-            message: 'sportif found!',
+            message: 'movie found!',
             sportif 
             });
         } else {
@@ -31,19 +31,19 @@ exports.findOne = (req, res) => {
     .catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
-                message: 'sportif not found with id' + req.paramas.movieId
+                message: 'Sportif not found with id' + req.paramas.movieId
             });
         }
         
         return res.status(500).send({
-            message: 'Error retrieving sportif with id' + req.paramas.sportifId
+            message: 'Error retrieving sportif with id' + req.paramas.movieId
         });
     })
 }
 
-exports.addSportif = (req, res) => {
+/*exports.addMovie = (req, res) => {
     // Get the data from request from request
-    const { sportif } = req.body;
+    const { movie } = req.body;
     const url = `http://www.omdbapi.com/?i=tt3896198&apikey=94da689c&t=${movie}`;
     
     // Make a request for a movie
@@ -63,7 +63,7 @@ exports.addSportif = (req, res) => {
                 rottenTomatoesScore: Ratings && Ratings[1].Value
             }
             
-            Sportifs.create(newMovie).then(movie => {
+            Movies.create(newMovie).then(movie => {
                 console.error(movie);
                 if(movie) {
                     // Return validation message
@@ -90,45 +90,40 @@ exports.addSportif = (req, res) => {
             movie: Movies
         });
     }); 
-}
+}*/
 
 // Pas testé
 exports.deleteOne = (req, res) => {
-    // Get the :id of the movie we want to delete from the params of the request
+    // Get the :id of the sportif we want to delete from the params of the request
     const { id } = req.params;
     
-    Movies.deleteOne({ _id: id }).then((movie) => {
+    Sportifs.deleteOne({ _id: id }).then((sportif) => {
         res.status(200).json({ 
-            movie,
-            message: `${movie} deleted !` 
+            sportif,
+            message: `${sportif} deleted !` 
         });
     }).catch(() => {
         res.status(404).json({ 
-            message: `Movie not found !` 
+            message: `Sportif not found !` 
         });
     })
 }
 
 // Pas testé
 exports.modifyFilm = (req, res) => {
-    // Get the :id of the movie we want to update from the params of the request
+    // Get the :id of the sportif we want to update from the params of the request
     const { id } = req.params;
-    // Get the new data of the movie we want to update from the body of the request
-    const { movie } = req.body;
+    // Get the new data of the sportif we want to update from the body of the request
+    const { sportif } = req.body;
 
 
-    Movies.findByIdAndUpdate(id, { ...movie }).then(()=> {
+    Sportifs.findByIdAndUpdate(id, { ...sportif }).then(()=> {
         // Return message
         res.json({
-          message: `Movie updated: ${movie}`
+          message: `Sportif updated: ${sportif}`
         });
     });    
   }
-
-
-
-
-
 
 
 

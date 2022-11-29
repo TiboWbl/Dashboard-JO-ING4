@@ -1,3 +1,9 @@
+.sportifs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .App {
   text-align: center;
 }
