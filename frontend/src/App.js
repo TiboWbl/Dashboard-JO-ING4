@@ -1,4 +1,16 @@
-import React from 'react';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App"> JEUX OLYMPIQUES 
+    </div>
+  );
+}
+
+export default App;
+
+
+/*import React from 'react';
 import Button from './components/button';
 import Sportif from './components/sportif';
 import axios from 'axios';
@@ -68,4 +80,4 @@ export default class App extends React.Component {
       </div>
       )
     }
-  }
+  }*/
