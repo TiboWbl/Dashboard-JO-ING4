@@ -1,0 +1,78 @@
+.cadre{
+    display: block;
+    position: absolute;
+    left: 73.8%;
+    top: 68%;
+    width: 230px;
+    height: 235px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+
+.cadre2{
+    display: block;
+    position: absolute;
+    left: 54%;
+    top: 68%;
+    width: 260px;
+    height: 235px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+
+.cadre3{
+    display: block;
+    position: absolute;
+    left: 35%;
+    top: 68%;
+    width: 249px;
+    height: 235px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+
+.cadre4{
+    display: block;
+    position: absolute;
+    left: 9.5%;
+    top: 68%;
+    width: 340px;
+    height: 235px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+
+.cadre5{
+    display: block;
+    position: absolute;
+    left: 73.8%;
+    top: 35%;
+    width: 230px;
+    height: 260px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+
+.graphe{
+    display: block;
+    position: absolute;
+    left: 9.5%;
+    top: 35%;
+    width: 880px;
+    height: 260px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+

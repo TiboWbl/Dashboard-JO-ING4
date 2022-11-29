@@ -5,5 +5,18 @@
 }
 
 .App {
-  text-align: center;
+  position:absolute;
+  left: 43.5%;
+  top: 6%;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.Infosportif {
+  position: absolute;
+  left: 68%;
+  top: 70%;
+  color: rgb(173, 157, 157);
+  font-family:'Times New Roman', Times, serif;
 }

@@ -1,0 +1,15 @@
+.dashboard {
+    display: flex;
+    width: 1150px;
+    height: 786.6px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    border: solid;
+    background-color: #A6AFFF;
+}
+
+img {
+    width: 575px;
+    height: 250.80051px;
+}
