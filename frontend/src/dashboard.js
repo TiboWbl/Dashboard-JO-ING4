@@ -19,7 +19,6 @@ export default class Dashboard extends React.Component {
          <div className='cadre4'></div>
          <div className='cadre5'></div>
          <div className='graphe'></div>
-         <div className='Infosportif'> Teddy Riner </div>
         </div>);
     }
 }
