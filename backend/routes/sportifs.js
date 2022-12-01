@@ -14,8 +14,8 @@ router.get('/:id', sportifController.findOne);
 
 //router.put('/', sportifController.addSportif);
 
-//router.delete('/:id', sportifController.deleteOne);
+router.delete('/:id', sportifController.deleteOne);
 
-//router.post('/:id', sportifController.modifySportif);
+router.post('/:id', sportifController.modifySportif);
 
 module.exports = router;

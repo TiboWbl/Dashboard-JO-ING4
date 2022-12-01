@@ -25,6 +25,7 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/sportifs", sportifsRouter);
 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -44,8 +45,8 @@ app.use(function(err, req, res, next) {
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-const dbName = 'jo';  // Nom de votre BDD
-const dbUrl = `mongodb://localhost:27017/${dbName}`;
+const dbName = 'jo';  // Nom de notre BDD
+const dbUrl = `mongodb://127.0.0.1:27017/${dbName}`;
 
 // Connecting to the db
 mongoose.connect(dbUrl, {

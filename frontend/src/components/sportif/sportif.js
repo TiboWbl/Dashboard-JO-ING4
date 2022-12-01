@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './button';
+import Button from '../button/button';
 // eslint-disable-next-line
 import { map, split } from 'lodash';
 import './sportif.css';
@@ -40,7 +40,7 @@ export default class Sportif extends React.Component {
                     {this.renderInfo('Age', age)}
                     {this.renderInfo('Nationalite', nationalite)}
                     {this.renderInfo('Nom', nom)}
-                    {this.renderInfos('Poids', poids)}
+                    {this.renderInfo('Poids', poids)}
                     {this.renderInfo('Prenom', prenom)}
                     {this.renderInfo('Sport', sport)}
                     {this.renderInfo('Taille', taille)}

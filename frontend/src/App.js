@@ -1,4 +1,4 @@
-import './App.css';
+/*import './App.css';
 
 function App() {
   return (
@@ -7,12 +7,12 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
 
 
-/*import React from 'react';
-import Button from './components/button';
-import Sportif from './components/sportif';
+import React from 'react';
+import Button from './components/button/button';
+import Sportif from './components/sportif/sportif';
 import axios from 'axios';
 import { map } from 'lodash';
 import './App.css';
@@ -80,4 +80,4 @@ export default class App extends React.Component {
       </div>
       )
     }
-  }*/
+  }

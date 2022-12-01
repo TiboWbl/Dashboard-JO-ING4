@@ -14,7 +14,7 @@ exports.findOne = (req, res) => {
     const { id } = req.params;
 
     // Find sportif which has [id] name in DB
-    Sportifs.findOne({ movie: id })
+    Sportifs.findOne({ sportif: id })
     .then(sportif => {
         if(sportif) {
             // Return sportif
@@ -110,7 +110,7 @@ exports.deleteOne = (req, res) => {
 }
 
 // Pas testé
-exports.modifyFilm = (req, res) => {
+exports.modifySportif = (req, res) => {
     // Get the :id of the sportif we want to update from the params of the request
     const { id } = req.params;
     // Get the new data of the sportif we want to update from the body of the request

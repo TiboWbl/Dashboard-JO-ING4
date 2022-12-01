@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const sportifSchema = new mongoose.Schema({
     age: Number,
     nationalite: String,
-    nom: String, 
+    nom: { type: String, required: true },
     poids: Number,
     prenom: String, 
     sport: String, 
