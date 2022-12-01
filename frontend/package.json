@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@autocomplete/material-ui": "^0.0.17",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
     "@mui/material": "^5.10.16",

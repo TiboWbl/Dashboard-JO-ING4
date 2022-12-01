@@ -14,12 +14,12 @@ exports.findOne = (req, res) => {
     const { id } = req.params;
 
     // Find sportif which has [id] name in DB
-    Sportif.findOne({ movie: id })
+    Sportifs.findOne({ movie: id })
     .then(sportif => {
         if(sportif) {
             // Return sportif
             res.status(200).json({
-            message: 'movie found!',
+            message: 'sportif found!',
             sportif 
             });
         } else {
