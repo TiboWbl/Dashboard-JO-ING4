@@ -35,12 +35,11 @@ export default class App extends React.Component {
 
   addFilmInputChange = event => {
     this.setState({ addFilmInputValue: event.target.value });
-
     console.log('value is:', event.target.value);
   };
   
   getList= () => {
-    axios.get(BACKEND_BASE_URL).then((data) => data.data && data.data.sportifs && this.setState({ sportifs: data.data.sportifs }));
+    axios.get(BACKEND_BASE_URL).then((data) => data.data && data.data.sportifs && this.setState({ sportifs: data.data.sportifs}));
   }
   
   addSportif= () => {
@@ -62,7 +61,7 @@ export default class App extends React.Component {
 
     return (
       <div>
-        {this.renderCategory('Refresh', this.getList)}
+        {this.renderCategory('Actualiser', this.getList)}
         <div className='category'>
               <input
                 type="text"
@@ -71,7 +70,7 @@ export default class App extends React.Component {
                 onChange={this.addFilmInputChange}
                 value={addFilmInputValue}
               />
-            <Button text={'Add sportif'} onClick={this.addSportif} />
+            <Button text={'Ajouter un athlète'} onClick={this.addSportif} />
         </div>
 
         <div className='sportifs'>

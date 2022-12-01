@@ -1,8 +1,9 @@
 .button {
   padding: 3px 5px;
   margin: 5px;
-  border: 1px solid black;
-  border-radius: 5px;
+  border: 1px solid white;
+  font-size: 20px;
+  border-radius: 10px;
 }
 
 .button:hover {

@@ -37,15 +37,15 @@ export default class Sportif extends React.Component {
         return (
             <div className='sportif'>
                 <div className='infos'>
-                    {this.renderInfo('Age', age)}
-                    {this.renderInfo('Nationalite', nationalite)}
+                    {this.renderInfo('Prénom', prenom)}
                     {this.renderInfo('Nom', nom)}
-                    {this.renderInfo('Poids', poids)}
-                    {this.renderInfo('Prenom', prenom)}
+                    {this.renderInfo('Âge', age)}
                     {this.renderInfo('Sport', sport)}
-                    {this.renderInfo('Taille', taille)}
+                    {this.renderInfo('Nationalité', nationalite)}
+                    {this.renderInfo('Taille (cm)', taille)}
+                    {this.renderInfo('Poids (kg)', poids)}
                 </div>
-                <Button text={'Delete sportif'} onClick={() => deleteSportif(id)} />
+                <Button text={'Supprimer Athlète'} onClick={() => deleteSportif(id)} />
             </div>)
     }
 }
