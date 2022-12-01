@@ -9,6 +9,21 @@
     background-color: #A6AFFF;
 }
 
+td{position:relative; z-index:0}
+.logo{position:absolute; width: 282.5px; height: 220.5px; top: 13px; left: 435px; z-index:2}
+.fond1{position:absolute; top:0; left:0; z-index:1}
+.fond2{position:absolute; top:0; left: 575px; z-index:1}
+.App {
+    position:absolute;
+    width: 600px;
+    left: 485px;
+    top: 20px;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    z-index:2
+}
+
 img {
     width: 575px;
     height: 250.80051px;
