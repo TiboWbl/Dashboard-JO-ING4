@@ -1,25 +1,13 @@
-import './App.css';
-import Dashboard from './components/dashboard/dashboard';
-
-function App() {
-  return (
-    <Dashboard />
-  );
-}
-
-export default App;
-
-
-/*import React from 'react';
-import Button from './components/button/button';
-import Sportif from './components/sportif/sportif';
+import React from 'react';
+import Button from '../button/button';
+import Sportif from './sportif';
 import axios from 'axios';
 import { map } from 'lodash';
-import './App.css';
+import '../../App.css';
 
-let BACKEND_BASE_URL = "http://localhost:3001/sportifs/1";
+let BACKEND_BASE_URL = "http://localhost:3001/sportifs/Riner";
 
-export default class App extends React.Component {
+export default class Athlete extends React.Component {
   constructor() {
     super();
     
@@ -52,7 +40,7 @@ export default class App extends React.Component {
   }
   
   renderCategory = (label, action) => {
-    return (<div className='category'>
+    return (<div>
     <Button text={label} onClick={action} />
     </div>)
   }
@@ -63,7 +51,7 @@ export default class App extends React.Component {
     /*async function refresh(event)  {
 
       BACKEND_BASE_URL = "http://localhost:3001/sportifs/";
-    }
+    }*/
 
     async function handlesubmit(event)  {
         event.preventDefault();
@@ -72,21 +60,27 @@ export default class App extends React.Component {
     }
 
     return (
-      
-      <div>
-        <form onSubmit={handlesubmit}>
-          <input type="id" name="id" id="id"></input><br/>
-          <button type="submit" >Click</button>
-        
-        </form>
-        
-        {this.renderCategory('Actualiser', this.getList)}
 
-        <div className='sportifs'>
+
+      <html>
+        <head>
+            
+        <link href='https://css.gg/search.css' rel='stylesheet'></link>
+        </head>
+        
+      <div>
+
+       <div className='sportifs'>
+       <form class="test" onSubmit={handlesubmit}>
+          <input min="1" max="12" size="15" type="id" name="id" id="id"></input>
+          <button className="refresh" type="submit"  ><i class="gg-search"></i></button>
+          {this.renderCategory('Actualiser', this.getList)}
+        </form>
           {map(sportifs, (sport, index) => <Sportif key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['_id'])}/>)}
         </div>
         
       </div>
+      </html>
       )
     }
-  }*/
+  }

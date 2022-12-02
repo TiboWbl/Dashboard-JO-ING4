@@ -11,11 +11,11 @@ exports.findAll = (req, res) => {
 }
 
 exports.findOne = (req, res) => {
-    const { id } = req.params;
+    const { nom } = req.params;
     // Find sportif which has [id] name in DB
-    //console.log({ sportif: id });
+    //console.log({ sportif: nom });
     let sportifs = [];
-    Sportifs.findOne({ "_id" : id })
+    Sportifs.findOne({ "nom" : nom })
     
     .then(test => {
         
@@ -28,7 +28,7 @@ exports.findOne = (req, res) => {
             });
         } else {
             res.status(404).json({
-            message: `sportif ${id} not found!`
+            message: `sportif ${nom} not found!`
             });
         }
     })

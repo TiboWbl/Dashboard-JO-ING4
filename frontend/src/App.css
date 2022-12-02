@@ -2,7 +2,31 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 490px;
+  padding-left: 900px;
 }
+
+.refresh {
+  padding: 3px 3px;
+  margin: 5px;
+  font-size: 20px;
+  border-color: #A6AFFF;
+  width: 20px;
+  height: 25px;
+  background-color: #A6AFFF;
+  border: none;
+}
+
+.refresh:hover{
+  cursor: pointer;
+}
+
+.test {
+  display: flex;
+  width: 200px;
+  height: 30px;
+}
+
 
 
 

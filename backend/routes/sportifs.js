@@ -10,7 +10,7 @@ const sportifs = [];
 
 router.get('/', sportifController.findAll);
 
-router.get('/:id', sportifController.findOne);
+router.get('/:nom', sportifController.findOne);
 
 //router.put('/', sportifController.addSportif);
 

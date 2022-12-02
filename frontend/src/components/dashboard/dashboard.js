@@ -5,6 +5,7 @@ import fond1 from '../../img/fond1.jpg';
 import fond2 from '../../img/fond2.jpg';
 import logo from '../../img/logo.png';
 import App from '../../App';
+import Athlete from '../sportif/athlete';
 
 export default class Dashboard extends React.Component {
     render() {
@@ -16,6 +17,7 @@ export default class Dashboard extends React.Component {
                     <img class="fond2" src={fond2} alt='' />
                     <img class="logo" src={logo} alt='' />
                 </td>
+                <Athlete />
                 
                
             </div>);
