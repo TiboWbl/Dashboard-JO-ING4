@@ -6,6 +6,7 @@ import fond2 from '../../img/fond2.jpg';
 import logo from '../../img/logo.png';
 import App from '../../App';
 import Athlete from '../sportif/athlete';
+import Pays from '../medal/pays';
 
 export default class Dashboard extends React.Component {
     render() {
@@ -18,6 +19,7 @@ export default class Dashboard extends React.Component {
                     <img class="logo" src={logo} alt='' />
                 </td>
                 <Athlete />
+                <Pays />
                 
                
             </div>);

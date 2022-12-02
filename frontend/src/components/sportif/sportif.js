@@ -28,6 +28,7 @@ export default class Sportif extends React.Component {
                     {this.renderInfo('Taille (cm)', taille)}
                     {this.renderInfo('Poids (kg)', poids)}
                 </div>
-            </div>)
+            </div>
+            )
     }
 }
