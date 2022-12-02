@@ -17,7 +17,7 @@ import axios from 'axios';
 import { map } from 'lodash';
 import './App.css';
 
-const BACKEND_BASE_URL = "http://localhost:3001/sportifs/";
+let BACKEND_BASE_URL = "http://localhost:3001/sportifs/1";
 
 export default class App extends React.Component {
   constructor() {
@@ -45,6 +45,7 @@ export default class App extends React.Component {
   addSportif= () => {
     axios.put(BACKEND_BASE_URL, { sportif: this.state.addFilmInputValue }).then((data) => this.getList());
   }
+
   
   deleteSportif= (id) => {
     axios.delete(`${BACKEND_BASE_URL}/${id}`).then((data) => this.getList());
@@ -59,23 +60,32 @@ export default class App extends React.Component {
   render() {  
     const { sportifs, addFilmInputValue} = this.state;
 
+    /*async function refresh(event)  {
+
+      BACKEND_BASE_URL = "http://localhost:3001/sportifs/";
+    }*/
+
+    async function handlesubmit(event)  {
+        event.preventDefault();
+        const id=event.target.id.value;
+        BACKEND_BASE_URL = "http://localhost:3001/sportifs/"+id;
+    }
+
     return (
+      
       <div>
+        <form onSubmit={handlesubmit}>
+          <input type="id" name="id" id="id"></input><br/>
+          <button type="submit" >Click</button>
+        
+        </form>
+        
         {this.renderCategory('Actualiser', this.getList)}
-        <div className='category'>
-              <input
-                type="text"
-                id="addFilm"
-                name="addFilm"
-                onChange={this.addFilmInputChange}
-                value={addFilmInputValue}
-              />
-            <Button text={'Ajouter un athlète'} onClick={this.addSportif} />
-        </div>
 
         <div className='sportifs'>
-          {map(sportifs, (sportif, index) => <Sportif key={`sportif-${index}`} infos={sportif} deleteSportif={() => this.deleteSportif(sportif['_id'])}/>)}
+          {map(sportifs, (sport, index) => <Sportif key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['_id'])}/>)}
         </div>
+        
       </div>
       )
     }

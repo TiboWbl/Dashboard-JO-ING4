@@ -25,8 +25,7 @@ root.render(
   <React.StrictMode>
     <Dashboard />
     <App />
-    <Pop/>
-    <Autocomplete2 />
+    
   </React.StrictMode>
 );
 

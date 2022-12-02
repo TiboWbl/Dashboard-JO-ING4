@@ -4,17 +4,6 @@ import Button from '../button/button';
 import { map, split } from 'lodash';
 import './sportif.css';
 
-/**
- * Data reçu :
- *  movie, // Titre
-    yearOfRelease,
-    duration // en minutes,
-    actors,
-    poster, // lien vers une image d'affiche,
-    boxOffice, // en USD$,
-    rottenTomatoesScore
- */
-
 export default class Sportif extends React.Component {
     renderInfo(label, info) {
         return (<div className='infoLine'>
@@ -23,16 +12,10 @@ export default class Sportif extends React.Component {
         </div>);
     }
 
-    renderInfos(label, infos) {
-        return (<div className='infoLine'>
-            <div className='infoLabel'>{label}</div>
-            <div>{map(infos, info => <div className='info' key ={`infoList-${info}`}>{info}</div>)}</div>
-        </div>);
-    }
-
     render() {
         const { infos, deleteSportif } = this.props;
-        const { id, age, nationalite, nom, poids, prenom, sport, taille } = infos;
+        //console.log(infos);
+        const { _id, age, nationalite, nom, poids, prenom, sport, taille } = infos;
 
         return (
             <div className='sportif'>
@@ -45,7 +28,6 @@ export default class Sportif extends React.Component {
                     {this.renderInfo('Taille (cm)', taille)}
                     {this.renderInfo('Poids (kg)', poids)}
                 </div>
-                <Button text={'Supprimer Athlète'} onClick={() => deleteSportif(id)} />
             </div>)
     }
 }

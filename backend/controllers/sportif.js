@@ -12,15 +12,19 @@ exports.findAll = (req, res) => {
 
 exports.findOne = (req, res) => {
     const { id } = req.params;
-
     // Find sportif which has [id] name in DB
-    Sportifs.findOne({ sportif: id })
-    .then(sportif => {
-        if(sportif) {
+    //console.log({ sportif: id });
+    let sportifs = [];
+    Sportifs.findOne({ "_id" : id })
+    
+    .then(test => {
+        
+        if(test) {
             // Return sportif
+            sportifs.push(test);
             res.status(200).json({
-            message: 'sportif found!',
-            sportif 
+                
+            sportifs
             });
         } else {
             res.status(404).json({
@@ -31,14 +35,15 @@ exports.findOne = (req, res) => {
     .catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
-                message: 'Sportif not found with id' + req.paramas.movieId
+                message: 'Sportif not found with id' + req.paramas.sportifId
             });
         }
         
         return res.status(500).send({
-            message: 'Error retrieving sportif with id' + req.paramas.movieId
+            message: 'Error retrieving sportif with id' + req.paramas.sportifId
         });
     })
+
 }
 
 /*exports.addMovie = (req, res) => {
