@@ -41,12 +41,11 @@
 }
 
 .infoLabel2 {
-    color:rgb(192, 32, 32);
+    color: black;
     justify-content: space-between;
     text-align: start;
+    height: 5px;
 }
-
-
 
 img {
     width: 150px;

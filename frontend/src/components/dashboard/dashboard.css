@@ -6,13 +6,45 @@
     margin-left: auto;
     margin-top: 30px;
     border: solid;
+    border-radius: 15px;
     background-color: #A6AFFF;
 }
 
-td{position:relative; z-index:0}
-.logo{position:absolute; width: 282.5px; height: 220.5px; top: 13px; left: 435px; z-index:2}
-.fond1{position:absolute; top:0;width:575px; left:0; z-index:1;border-radius: 0;}
-.fond2{position:absolute; top:0;width:575px; left: 575px; z-index:1; border-radius: 0;}
+td{
+    position:relative;
+     z-index:0
+}
+
+.logo{
+    position:absolute; 
+    width: 282.5px; 
+    height: 220.5px; 
+    top: 13px; 
+    left: 435px; 
+    z-index:2
+}
+
+.fond1{
+    position:absolute; 
+    top:0;
+    width:575px; 
+    left:0; z-index:1;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+}
+
+.fond2{
+    position:absolute; 
+    top:0;width:575px; 
+    left: 575px; z-index:1; 
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 10px;
+}
+
 .App {
     position:absolute;
     width: 200px;
