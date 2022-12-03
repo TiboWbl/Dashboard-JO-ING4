@@ -1,34 +1,51 @@
 .dashboard {
-    display: flex;
-    width: 1150px;
-    height: 786.6px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 80%;
+    height: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
     margin-top: 30px;
     border: solid;
     border-radius: 15px;
     background-color: #A6AFFF;
 }
 
-td{
-    position:relative;
-     z-index:0
+.centrage{
+    padding: 20px;
+}
+
+.entete{
+    position: relative;
+    height: 30%;
+    z-index: 1000;
+    width: 100%;
+}
+
+.contenuDashboard{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+}
+
+.image{
+    display: flex;
 }
 
 .logo{
     position:absolute; 
-    width: 282.5px; 
-    height: 220.5px; 
-    top: 13px; 
-    left: 435px; 
+    width: 17%; 
+    height: 80%; 
+    top: 5%; 
+    left: 41%; 
     z-index:2
 }
 
 .fond1{
-    position:absolute; 
+    position:relative; 
     top:0;
-    width:575px; 
-    left:0; z-index:1;
+    width:50%; 
+    z-index:1;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-top-left-radius: 10px;
@@ -36,9 +53,10 @@ td{
 }
 
 .fond2{
-    position:absolute; 
-    top:0;width:575px; 
-    left: 575px; z-index:1; 
+    position:relative; 
+    top:0;
+    width:50%; 
+    z-index:1; 
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-top-left-radius: 0px;
@@ -47,8 +65,8 @@ td{
 
 .App {
     position:absolute;
-    width: 200px;
-    left: 475px;
+    width: 20%;
+    left: 40%;
     top: 10px;
     text-align: center;
     color: white;
@@ -61,3 +79,31 @@ img {
     width: 575px;
     height: 250.80051px;
 }
+
+.dash{
+    display:flex;
+    height: 35%;
+    padding: 5px;
+}
+
+.widget1{
+    background-color: red;
+    width: 75%;
+    height: 100%;
+    margin:5px;
+}
+
+.widget2{
+    background-color: blue;
+    width: 25%;
+    height: 100%;
+    margin:5px;
+}
+
+.widget3{
+    background-color: green;
+    width: 25%;
+    height: 100%;
+    margin:5px;
+}
+

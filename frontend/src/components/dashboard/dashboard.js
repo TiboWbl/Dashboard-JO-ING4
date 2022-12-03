@@ -14,18 +14,55 @@ export default class Dashboard extends React.Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <div>
+                    <Navbar />
+                </div>
+                <div className='centrage'>
                 <div className="dashboard">
-                <td>
-                    <div className='App'> JEUX OLYMPIQUES TOKYO 2020</div>
-                    <img class="fond1" src={fond1} alt='' />
-                    <img class="fond2" src={fond2} alt='' />
-                    <img class="logo" src={logo} alt='' />
-                </td>
-                <Athlete />
-                <Pays />
+                    <div className="entete">
                 
-            </div>
+                        <div className='App'> 
+                            JEUX OLYMPIQUES TOKYO 2020
+                        </div>
+                        <div className='image'>
+                            <img class="fond1" src={fond1} alt='' />
+                            <img class="fond2" src={fond2} alt='' />
+                        </div>
+                        
+                        <img class="logo" src={logo} alt='' />
+                    
+                    </div>
+                        <div className='dash'>
+                            <div className='widget1'>
+                                <p>a</p>
+                            </div>
+
+                            <div className='widget2'>
+                                <p>a</p>
+                            </div>
+                        </div>
+
+                        <div className='dash'>
+                        
+                        <div className='widget3'>
+                            <Pays />
+                            <p>a</p>
+                        </div>
+                        <div className='widget3'>
+                        <p>a</p>
+                        </div>
+                        <div className='widget3'>
+                        <p>a</p>
+                        </div>
+                        <div className='widget3'>
+                            <Athlete />  
+                            <p>a</p>
+                        </div>
+                    
+                        </div>
+                    </div>
+                
+                </div>
             </div>
             );
     }

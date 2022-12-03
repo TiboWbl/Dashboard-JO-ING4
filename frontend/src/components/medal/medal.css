@@ -55,10 +55,7 @@ img {
 }
 
 .medals{
-    position:relative;
     border: 1px solid white;
-    right: 1125px;
-    top: 577px;
     background-color: white;
     border-radius: 10px;
     height: 200px;

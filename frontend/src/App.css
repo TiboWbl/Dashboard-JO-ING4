@@ -2,11 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 490px;
-  padding-left: 900px;
+
 }
-
-
 
 .refresh {
   padding: 3px 3px;
