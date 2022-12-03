@@ -10,8 +10,7 @@ const classements = [];
 
 router.get('/', classementController.findAll);
 
-router.get('/:nom', classementController.findOne);
+router.get('/:discipline', classementController.findOne);
 
-//router.put('/', sportifController.addSportif);
 
 module.exports = router;

@@ -1,84 +1,130 @@
-import React from 'react';
-import Button from '../button/button';
-import { map, split } from 'lodash';
-
-import './graphe.css'
-import '../../App.css';
+import React, { Component } from "react";
+import axios from "axios";
 import '@progress/kendo-theme-default/dist/all.css';
-
 import {
-    Chart,
-    ChartTitle,
-    ChartSeries,
-    ChartSeriesItem,
-    ChartLegend,
-  } from "@progress/kendo-react-charts";
+  Chart,
+  ChartTitle,
+  ChartSeries,
+  ChartSeriesItem,
+  ChartLegend,
+} from "@progress/kendo-react-charts";
 
-export default class Graphe extends React.Component {
-    renderInfo(label, info) {
-        return (<div className='infoLine2'>
-            <div className='infoLabel2'>{label}</div>
-            <div className='info2'>{info}</div>
-        </div>);
+class Graphe extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        error: null,
+        isLoaded: false,
+        items: []
+      };
     }
+  
+    componentDidMount() {
+      fetch("http://localhost:3001/graphes")
+        .then(res => res.json())
+        .then(
+          (result) => {
+            
+            this.setState({
+              isLoaded: true,
+              items: result
+            });
 
-    render() {
-        const { infos, deleteMedal } = this.props;
-        //console.log(infos);
-        const { _id, sport1, sport2, sport3, sport4, share1, share2, share3, share4 } = infos;
-
-        const pieData = [
-            {
-              name: this.renderInfo('',sport1),
-              share: this.renderInfo('',share1),
-              color: "rgba(0, 0, 0, .5)",
-            },
-            {
-              name: this.renderInfo('',sport2),
-              share: this.renderInfo('',share2),
-              explode: true,
-              
-            },
-            {
-                name: this.renderInfo('',sport3),
-                share: this.renderInfo('',share3),
-              
-            },
-            {
-                name: this.renderInfo('',sport4),
-                share: this.renderInfo('',share4),
-            },
+            console.log(this.state.items);
+            console.log("use");
+            console.log(this.state.items.graphes[0]);
         
-          ];
+        },
+          // Note: it's important to handle errors here
+          // instead of a catch() block so that we don't swallow
+          // exceptions from actual bugs in components.
 
-          return (
-            <div className="co">
-                <div className="k">
-                  <Chart
-                    style={{
-                      height: 350,
-                    }}
-                  >
-                    <ChartTitle text="Stats sports" />
-                    <ChartLegend position="bottom" orientation="horizontal" />
-                    <ChartSeries>
-                      <ChartSeriesItem
-                        type="pie"
-                        overlay={{
-                          gradient: "roundedBevel",
-                        }}
-                        tooltip={{
-                          visible: true,
-                        }}
-                        data={pieData}
-                        categoryField="name"
-                        field="share"
-                        color="color"
-                      />
-                    </ChartSeries>
-                  </Chart>
-                </div>
-              </div>
-          )
+          (error) => {
+            this.setState({
+              isLoaded: true,
+              error
+            });
+          }
+        )
     }
-}
+  
+    render() {
+
+
+      const { error, isLoaded, items } = this.state;
+      const datas = this.state.items;
+      const test = "oui";
+      if (error) {
+        return <div>Error: {error.message}</div>;
+      } else if (!isLoaded) {
+        return <div>Loading...</div>;
+      } else {
+        const pieData = [
+          {
+            name: datas.graphes[0].sport1,
+            share: datas.graphes[0].share1,
+            color: "rgba(0, 0, 0, .5)",
+          },
+          {
+            name: datas.graphes[0].sport2,
+            share: datas.graphes[0].share2,
+            explode: true,
+            
+          },
+          {
+            name: datas.graphes[0].sport3,
+            share: datas.graphes[0].share3,
+            
+          },
+          {
+            name: datas.graphes[0].sport4,
+            share: datas.graphes[0].share4,
+          },
+      
+        ];
+        return (
+           /*
+            //   <NbaWidget  data={datas} />
+           <div className="widget2">
+            
+            <p className="Titre">Resultats de la nuit</p>
+               
+                <div className="match">
+                <div className="logo1"></div>
+                    <div className="score"><p>{datas.graphes[0].sport1}  -  {datas.graphes[0].share1}</p></div>
+                </div>  
+           </div>
+           */
+           <div className="co">
+           <div className="k">
+             <Chart
+               style={{
+                 height: 350,
+               }}
+             >
+               <ChartTitle text="Stats sports" />
+               <ChartLegend position="bottom" orientation="horizontal" />
+               <ChartSeries>
+                 <ChartSeriesItem
+                   type="pie"
+                   overlay={{
+                     gradient: "roundedBevel",
+                   }}
+                   tooltip={{
+                     visible: true,
+                   }}
+                   data={pieData}
+                   categoryField="name"
+                   field="share"
+                   color="color"
+                 />
+               </ChartSeries>
+             </Chart>
+           </div>
+         </div>
+        );
+      }
+    }
+  }
+
+  export default Graphe;

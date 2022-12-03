@@ -8,7 +8,8 @@ import App from '../../App';
 import Athlete from '../sportif/athlete';
 import Pays from '../medal/pays';
 import Navbar from '../navbar/navbar';
-import Camembert from '../graphe/camembert';
+import Resultat from '../classement/resultat';
+import Graphe from '../graphe/graphe';
 
 export default class Dashboard extends React.Component {
     render() {
@@ -18,48 +19,48 @@ export default class Dashboard extends React.Component {
                     <Navbar />
                 </div>
                 <div className='centrage'>
-                <div className="dashboard">
-                    <div className="entete">
-                
-                        <div className='App'> 
-                            JEUX OLYMPIQUES TOKYO 2020
-                        </div>
-                        <div className='image'>
-                            <img class="fond1" src={fond1} alt='' />
-                            <img class="fond2" src={fond2} alt='' />
-                        </div>
-                        
-                        <img class="logo" src={logo} alt='' />
+                    <div className="dashboard">
+                        <div className="entete">
                     
-                    </div>
-                        <div className='dash'>
-                            <div className='widget1'>
-                                <p>a</p>
+                            <div className='App'> 
+                                JEUX OLYMPIQUES TOKYO 2020
+                            </div>
+                            <div className='image'>
+                                <img class="fond1" src={fond1} alt='' />
+                                <img class="fond2" src={fond2} alt='' />
+                            </div>
+                            
+                            <img class="logo" src={logo} alt='' />
+                        
+                        </div>
+                            <div className='dash'>
+                                <div className='widget1'>
+                                    <p></p>
+                                </div>
+
+                                <div className='widget2'>
+                                    <Resultat />
+                                </div>
                             </div>
 
-                            <div className='widget2'>
-                                <p>a</p>
+                            <div className='dash'>
+                            
+                            <div className='widget3'>
+                                <Pays />
+                                <p></p>
                             </div>
-                        </div>
-
-                        <div className='dash'>
+                            <div className='widget3'>
+                                <p></p>
+                            </div>
+                            <div className='widget3'>
+                                <Graphe />
+                            </div>
+                            <div className='widget3'>
+                                <Athlete />  
+                                <p></p>
+                            </div>
                         
-                        <div className='widget3'>
-                            <Pays />
-                            <p>a</p>
-                        </div>
-                        <div className='widget3'>
-                        <p>a</p>
-                        </div>
-                        <div className='widget3'>
-                        <p>a</p>
-                        </div>
-                        <div className='widget3'>
-                            <Athlete />  
-                            <p>a</p>
-                        </div>
-                    
-                        </div>
+                            </div>
                     </div>
                 
                 </div>

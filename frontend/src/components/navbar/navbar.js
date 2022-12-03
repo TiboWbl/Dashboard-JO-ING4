@@ -8,10 +8,10 @@ export default class Navbar extends React.Component {
             <div className="navigation">
                 <ul>
                     <NavLink to="/">
-                        <li>Dashboard</li>
+                        <li><a>	Dashboard &#127968;</a></li>
                     </NavLink>
                     <NavLink to="/api">
-                        <li>Api</li>
+                        <li><a>	API &#9881;</a></li>
                     </NavLink>
                 </ul>
                 

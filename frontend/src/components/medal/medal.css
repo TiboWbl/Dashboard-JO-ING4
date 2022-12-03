@@ -54,11 +54,29 @@ img {
     margin : 5px;
 }
 
+th, td {
+    padding-inline: 9px;
+  }
+
 .medals{
     border: 1px solid white;
     background-color: white;
     border-radius: 10px;
-    height: 200px;
+    height: 285px;
     overflow-y: auto;
 }
+
+.medals::-webkit-scrollbar {
+    width: 16px;
+  }
+  
+  .medals::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+  }
+  
+  .medals::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 100px;
+  }
 

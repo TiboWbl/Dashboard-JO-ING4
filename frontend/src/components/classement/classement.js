@@ -2,7 +2,6 @@ import React from 'react';
 import Button from '../button/button';
 // eslint-disable-next-line
 import { map, split } from 'lodash';
-import './classement.css';
 
 export default class Classement extends React.Component {
     renderInfo(label, info) {
@@ -20,7 +19,7 @@ export default class Classement extends React.Component {
         return (
             <div className='sportif'>    
                 <div className='infos'>
-                    {this.renderInfo('discipline', discipline)}
+                    {this.renderInfo('Discipline', discipline)}
                     {this.renderInfo('Nationalité', nationalite)}
                     {this.renderInfo('Sportif', sportif)}
                     {this.renderInfo('Temps', temps1)}

@@ -1,12 +1,12 @@
 .dashboard {
     width: 80%;
-    height: 10%;
+    height: auto;
     margin-right: 10%;
     margin-left: 10%;
-    margin-top: 30px;
+    margin-top: 15px;
     border: solid;
     border-radius: 15px;
-    background-color: #A6AFFF;
+    background-color: #1b304a;
 }
 
 .centrage{
@@ -36,7 +36,7 @@
     position:absolute; 
     width: 17%; 
     height: 80%; 
-    top: 5%; 
+    top: 10%; 
     left: 41%; 
     z-index:2
 }
@@ -65,8 +65,8 @@
 
 .App {
     position:absolute;
-    width: 20%;
-    left: 40%;
+    width: 15%;
+    left: 42%;
     top: 10px;
     text-align: center;
     color: white;
@@ -81,29 +81,35 @@ img {
 }
 
 .dash{
-    display:flex;
-    height: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
     padding: 5px;
 }
 
 .widget1{
-    background-color: red;
-    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 74%;
     height: 100%;
     margin:5px;
 }
 
 .widget2{
-    background-color: blue;
-    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 24%;
     height: 100%;
-    margin:5px;
+    margin:7px;
 }
 
 .widget3{
-    background-color: green;
-    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 24%;
     height: 100%;
-    margin:5px;
+    margin:7px;
 }
+
+
 

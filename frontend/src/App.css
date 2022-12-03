@@ -2,17 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 .refresh {
   padding: 3px 3px;
   margin: 5px;
   font-size: 20px;
-  border-color: #A6AFFF;
+  border-color: #1b304a;
   width: 20px;
   height: 25px;
-  background-color: #A6AFFF;
+  background-color: #1b304a;
   border: none;
 }
 

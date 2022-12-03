@@ -27,7 +27,7 @@ export default class Resultat extends React.Component {
   };
   
   getList= () => {
-    axios.get(BACKEND_BASE_URL4).then((data) => data.data && data.data.sportifs && this.setState({ sportifs: data.data.sportifs}));
+    axios.get(BACKEND_BASE_URL4).then((data) => data.data && data.data.classements && this.setState({ classements: data.data.classements}));
   }
   
   addClassement= () => {
@@ -53,7 +53,7 @@ export default class Resultat extends React.Component {
       BACKEND_BASE_URL = "http://localhost:3001/sportifs/";
     }*/
 
-    async function handlesubmit(event)  {
+    async function handlesubmit2(event)  {
         event.preventDefault();
         const id=event.target.id.value;
         BACKEND_BASE_URL4 = "http://localhost:3001/classements/"+id;
@@ -71,12 +71,12 @@ export default class Resultat extends React.Component {
       <div>
 
        <div className='sportifs'>
-       <form class="test" onSubmit={handlesubmit}>
-          <input placeholder="Entrez le sportif..." required="required" size="15" className="id" type="id" name="id" id="id" pattern="[A-Za-z0-9]{1,20}"></input>
+       <form class="test" onSubmit={handlesubmit2}>
+          <input placeholder="Entrez le sport..." required="required" size="15" className="id" type="id" name="id" id="id" pattern="[A-Za-z0-9]{1,20}"></input>
           <button className="refresh" type="submit"  ><i class="gg-search"></i></button>
           {this.renderCategory('Actualiser', this.getList)}
         </form>
-          {map(classements, (sport, index) => <Classement key={`classement-${index}`} infos={sport} deleteClassement={() => this.deleteClassement(sport['_id'])}/>)}
+          {map(classements, (classement, index) => <Classement key={`classement-${index}`} infos={classement} deleteClassement={() => this.deleteClassement(classement['_id'])}/>)}
         </div>
         
       </div>
