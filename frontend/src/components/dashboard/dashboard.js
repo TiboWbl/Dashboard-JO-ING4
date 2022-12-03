@@ -24,9 +24,7 @@ export default class Dashboard extends React.Component {
                 </td>
                 <Athlete />
                 <Pays />
-                <Camembert />
                 
-               
             </div>
             </div>
             );
