@@ -5,9 +5,9 @@ import axios from 'axios';
 import { map } from 'lodash';
 import '../../App.css';
 
-let BACKEND_BASE_URL = "http://localhost:3001/sportifs/Riner";
+let BACKEND_BASE_URL = "http://localhost:3001/sportifs/";
 
-export default class Athlete extends React.Component {
+export default class Tout extends React.Component {
   constructor() {
     super();
     
@@ -70,10 +70,10 @@ export default class Athlete extends React.Component {
         
       <div>
 
-       <div className='sportifs'>
-       <form class="test" onSubmit={handlesubmit}>
+       <div className='toutsportifs'>
+       <form class="test2" onSubmit={handlesubmit}>
           <input required="required" size="15" type="id" name="id" id="id"></input>
-          <button className="refresh" type="submit"  ><i class="gg-search"></i></button>
+          <button className="refresh2" type="submit"  ><i class="gg-search"></i></button>
           {this.renderCategory('Actualiser', this.getList)}
         </form>
           {map(sportifs, (sport, index) => <Sportif key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['_id'])}/>)}

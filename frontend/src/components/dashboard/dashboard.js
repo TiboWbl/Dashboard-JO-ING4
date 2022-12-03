@@ -7,11 +7,14 @@ import logo from '../../img/logo.png';
 import App from '../../App';
 import Athlete from '../sportif/athlete';
 import Pays from '../medal/pays';
+import Navbar from '../navbar/navbar';
 
 export default class Dashboard extends React.Component {
     render() {
         return (
-            <div className="dashboard">
+            <div>
+                <Navbar />
+                <div className="dashboard">
                 <td>
                     <div className='App'> JEUX OLYMPIQUES TOKYO 2020</div>
                     <img class="fond1" src={fond1} alt='' />
@@ -22,7 +25,9 @@ export default class Dashboard extends React.Component {
                 <Pays />
                 
                
-            </div>);
+            </div>
+            </div>
+            );
     }
 }
 

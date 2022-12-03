@@ -70,7 +70,8 @@ img {
     position:absolute;
     border: 1px solid white;
     right: 1120px;
-    bottom: 150px;
+    bottom: 65px;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 10px;
 }
+

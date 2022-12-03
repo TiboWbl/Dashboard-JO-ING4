@@ -6,13 +6,6 @@
   padding-left: 900px;
 }
 
-.medals {
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .refresh {
   padding: 3px 3px;
   margin: 5px;
@@ -24,7 +17,22 @@
   border: none;
 }
 
+.refresh2 {
+  padding: 3px 3px;
+  margin: 5px;
+  font-size: 20px;
+  border-color: #2b2a2a;
+  width: 20px;
+  height: 25px;
+  background-color: #2b2a2a;
+  border: none;
+}
+
 .refresh:hover{
+  cursor: pointer;
+}
+
+.refresh2:hover{
   cursor: pointer;
 }
 
@@ -33,6 +41,19 @@
   width: 200px;
   height: 30px;
 }
+
+.test2 {
+  display: flex;
+  width: 4000px;
+  height: 30px;
+}
+
+.toutsportifs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 
 
 
