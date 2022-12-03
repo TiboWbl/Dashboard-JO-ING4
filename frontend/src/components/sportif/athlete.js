@@ -72,7 +72,7 @@ export default class Athlete extends React.Component {
 
        <div className='sportifs'>
        <form class="test" onSubmit={handlesubmit}>
-          <input required="required" size="15" type="id" name="id" id="id"></input>
+          <input required="required" size="15" type="id" name="id" id="id" pattern="[A-Za-z0-9]{1,20}"></input>
           <button className="refresh" type="submit"  ><i class="gg-search"></i></button>
           {this.renderCategory('Actualiser', this.getList)}
         </form>
