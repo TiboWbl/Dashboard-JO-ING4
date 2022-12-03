@@ -32,6 +32,34 @@
     text-align: right;
 }
 
+.infoLine2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    color: white;
+    text-align: center;
+}
+
+.infoLabel2 {
+    color:white;
+    margin-right: 5px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.infos2 {
+    width: 100%;
+    margin-bottom: 5px;
+    color: white;
+    text-align: center;
+}
+
+.info2 {
+    color:black;
+    justify-content: center;
+    text-align: left;
+}
+
 img {
     width: 150px;
     margin-bottom: 10px;
@@ -39,16 +67,10 @@ img {
 }
 
 .romain{
-    border: 1px solid #333;
-}
-
-.tibo{
-    border: 1px solid #333;
-}
-
-tr{
-    color: white;
-    overflow-y: auto;
-    border: 1px solid #333;
-    color: white;
+    position:absolute;
+    border: 1px solid white;
+    right: 1000px;
+    bottom: 140px;
+    background-color: white;
+    border-radius: 5px;
 }

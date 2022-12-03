@@ -42,9 +42,18 @@ export default class Pays extends React.Component {
     return (
 
       <div>
-
        <div className='medals'>
-          {map(medals, (medaille, index) => <Medal key={`medaille-${index}`} infos={medaille} deleteMedals={() => this.deleteMedals(medaille['_id'])}/>)}
+            <table className='romain'>
+                    <tr>
+                        <th>Pays</th>
+                        <th>Or</th>
+                        <th>Argent</th>
+                        <th>Bronze</th>
+                        <th>Total</th>
+                        <th>Classement</th>
+                    </tr>
+                      {map(medals, (medaille, index) => <Medal key={`medaille-${index}`} infos={medaille} deleteMedals={() => this.deleteMedals(medaille['_id'])}/>)}          
+            </table>
         </div>
         
       </div>
