@@ -67,10 +67,10 @@ img {
 }
 
 .romain{
-    position:absolute;
+    position:relative;
     border: 1px solid white;
-    right: 1120px;
-    bottom: 65px;
+    right: 980px;
+    top: 255px;
     background-color: white;
     border-radius: 10px;
 }

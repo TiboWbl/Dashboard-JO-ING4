@@ -6,6 +6,13 @@
   padding-left: 900px;
 }
 
+.medals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70px;
+}
+
 .refresh {
   padding: 3px 3px;
   margin: 5px;
