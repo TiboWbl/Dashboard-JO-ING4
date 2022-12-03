@@ -52,7 +52,7 @@ mongoose.Promise = global.Promise;
 const dbName = 'jo';  // Nom de notre BDD
 const dbUrl = `mongodb://127.0.0.1:27017/${dbName}`;
 
-// Connecting to the db
+// On se connecte à la base de donnée
 mongoose.connect(dbUrl, {
   useNewUrlParser: true
 });

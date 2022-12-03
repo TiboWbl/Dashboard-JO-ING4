@@ -9,8 +9,7 @@ export default class Api extends React.Component {
                 <Navbar />
                 <br/>
                 <br/>
-                <Tout />
-                
+                <Tout />   
             </div>);
     }
 }

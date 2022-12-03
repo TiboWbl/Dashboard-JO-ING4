@@ -46,35 +46,34 @@ exports.findOne = (req, res) => {
 
 }
 
-/*exports.addMovie = (req, res) => {
-    // Get the data from request from request
-    const { movie } = req.body;
-    const url = `http://www.omdbapi.com/?i=tt3896198&apikey=94da689c&t=${movie}`;
+exports.addSportif = (req, res) => {
+    //const { Nom, Prenom, Age, Nationalite, Sport, Taille, Poids  } = req.params;
+    console.log('prout');
+    console.log(req.params);
+    console.log(req.body);
     
-    // Make a request for a movie
     axios.get(url)
     .then((data) => {
         // handle success
         if(data.data){
-            const {Title, Year, Runtime, Actors, Poster, BoxOffice, Ratings} = data.data;
-            const newMovie = {
+            const newSportif = {
                 // _id: _.uniqueId(), // Fait par Mongodb
-                movie: Title,
-                yearOfRelease: Year,
-                duration: Runtime, // en minutes,
-                actors: Actors,
-                poster: Poster, // lien vers une image d'affiche,
-                boxOffice: BoxOffice, // en USD$,
-                rottenTomatoesScore: Ratings && Ratings[1].Value
+                nom: Nom,
+                prenom: Prenom,
+                age: Age, 
+                sport: Sport,
+                nationalite: Nationalite, 
+                taille: Taille, 
+                poids: Poids
             }
             
-            Movies.create(newMovie).then(movie => {
-                console.error(movie);
-                if(movie) {
+            Sportifs.create(newSportif).then(sportif => {
+                console.error(sportif);
+                if(sportif) {
                     // Return validation message
                     res.status(200).json({
-                        message: `Just added ${Title}`,
-                        movie: { newMovie },
+                        message: `Just added ${Nom}`,
+                        sportif: { newSportif },
                     });
                 }
             }).catch(error => {
@@ -85,19 +84,18 @@ exports.findOne = (req, res) => {
             
         } else {
             res.status(404).json({
-                message: `Movie not found`
+                message: `Sportif not found`
             });
         }
     })
     .catch(function (error) {
         // handle error
         res.json({error, 
-            movie: Movies
+            sportif: Sportifs
         });
     }); 
-}*/
+}
 
-// Pas testé
 exports.deleteOne = (req, res) => {
     // Get the :id of the sportif we want to delete from the params of the request
     const { nom } = req.params;
@@ -115,7 +113,7 @@ exports.deleteOne = (req, res) => {
     })
 }
 
-// Pas testé
+// Pas encore testé
 exports.modifySportif = (req, res) => {
     // Get the :id of the sportif we want to update from the params of the request
     const { id } = req.params;

@@ -6,12 +6,7 @@
   padding-left: 900px;
 }
 
-.medals {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 70px;
-}
+
 
 .refresh {
   padding: 3px 3px;
@@ -74,6 +69,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.plus {
+  margin-left: 58px;
+  margin-top: 70px;
+  font-size: 50px;
+  background-color: white;
+  border: none;
+}
+
+.plus:hover{
+  cursor: pointer;
 }
 
 

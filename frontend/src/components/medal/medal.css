@@ -33,18 +33,15 @@
 }
 
 .infoLine2 {
-    display: flex;
     margin-bottom: 5px;
     color: rgb(56, 29, 157);
     justify-content: center;
-    
 }
 
 .infoLabel2 {
     color: black;
     justify-content: space-between;
-    text-align: start;
-    height: 5px;
+    text-align: center;
 }
 
 img {
@@ -54,12 +51,17 @@ img {
 }
 
 .romain{
+    margin : 5px;
+}
+
+.medals{
     position:relative;
     border: 1px solid white;
-    right: 980px;
-    top: 255px;
+    right: 1125px;
+    top: 577px;
     background-color: white;
     border-radius: 10px;
-    
+    height: 200px;
+    overflow-y: auto;
 }
 

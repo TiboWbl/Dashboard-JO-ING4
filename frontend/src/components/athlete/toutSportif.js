@@ -71,14 +71,21 @@ export default class Tout extends React.Component {
         
       <div>
 
-       <div className='toutsportifs'>
-       <form class="test2" onSubmit={handlesubmit}>
-          <input required="required" size="15" type="id" name="id" id="id"></input>
-          <button className="refresh2" type="submit"  ><i class="gg-search"></i></button>
-          {this.renderCategory('Actualiser', this.getList)}
-        </form>
-          {map(sportifs, (sport, index) => <Sportif2 key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['_id'])}/>)}
-        </div>
+        <div className='toutsportifs'>
+              <form class="test2" onSubmit={handlesubmit}>
+                <input placeholder="Entrez le sportif..." required="required" size="15" className="id2" type="id" name="id" id="id"></input>
+                    <button className="refresh2" type="submit"  ><i class="gg-search"></i></button>
+                    {this.renderCategory('Actualiser', this.getList)}
+              </form>
+                {map(sportifs, (sport, index) => <Sportif2 key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['_id'])}/>)}
+              <div className='sportif'> 
+                  <div className='infos'>
+                    <form action="/add">
+                        <button className="plus" type="submit"  ><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </form>
+                  </div>
+              </div>
+          </div>
         
       </div>
       </html>

@@ -15,7 +15,6 @@ export default class Medal extends React.Component {
 
     render() {
         const { infos, deleteMedal } = this.props;
-        //console.log(infos);
         const { _id, Pays, Or, Argent, Bronze, Classement, Total_medailles } = infos;
 
         return (
@@ -27,7 +26,6 @@ export default class Medal extends React.Component {
                         <td>{this.renderInfo(Total_medailles)}</td>
                         <td>{this.renderInfo(Classement)}</td>
                     </tr>
-           
            )
     }
 }
