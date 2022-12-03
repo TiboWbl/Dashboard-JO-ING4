@@ -1,9 +1,10 @@
 import React from 'react';
 import Button from '../button/button';
-import Sportif from './sportif';
+import Sportif from '../sportif/sportif';
 import axios from 'axios';
 import { map } from 'lodash';
 import '../../App.css';
+import Sportif2 from './sportif2';
 
 let BACKEND_BASE_URL = "http://localhost:3001/sportifs/";
 
@@ -76,7 +77,7 @@ export default class Tout extends React.Component {
           <button className="refresh2" type="submit"  ><i class="gg-search"></i></button>
           {this.renderCategory('Actualiser', this.getList)}
         </form>
-          {map(sportifs, (sport, index) => <Sportif key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['_id'])}/>)}
+          {map(sportifs, (sport, index) => <Sportif2 key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['_id'])}/>)}
         </div>
         
       </div>

@@ -24,6 +24,23 @@
   border: none;
 }
 
+.trash {
+  padding: 3px 3px;
+  margin: 5px;
+  font-size: 20px;
+  border-color: white;
+  width: 20px;
+  height: 25px;
+  background-color: white;
+  border: none;
+}
+
+.trash:hover{
+  cursor: pointer;
+}
+
+
+
 .refresh2 {
   padding: 3px 3px;
   margin: 5px;

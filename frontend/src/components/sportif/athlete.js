@@ -35,8 +35,8 @@ export default class Athlete extends React.Component {
   }
 
   
-  deleteSportif= (id) => {
-    axios.delete(`${BACKEND_BASE_URL}/${id}`).then((data) => this.getList());
+  deleteSportif= (nom) => {
+    axios.delete(`${BACKEND_BASE_URL}/${nom}`).then((data) => this.getList());
   }
   
   renderCategory = (label, action) => {

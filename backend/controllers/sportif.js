@@ -100,12 +100,13 @@ exports.findOne = (req, res) => {
 // Pas testé
 exports.deleteOne = (req, res) => {
     // Get the :id of the sportif we want to delete from the params of the request
-    const { id } = req.params;
+    const { nom } = req.params;
+    let sportifs = [];
     
-    Sportifs.deleteOne({ _id: id }).then((sportif) => {
+    Sportifs.deleteOne({"nom" : nom }).then((sportifs) => {
         res.status(200).json({ 
-            sportif,
-            message: `${sportif} deleted !` 
+            sportifs,
+            message: `${sportifs} deleted !` 
         });
     }).catch(() => {
         res.status(404).json({ 
