@@ -20,12 +20,12 @@ export default class Medal extends React.Component {
 
         return (
                     <tr>
-                        <td>{this.renderInfo('', Pays)}</td>
-                        <td>{this.renderInfo('', Or)}</td>
-                        <td>{this.renderInfo('', Argent)}</td>
-                        <td>{this.renderInfo('', Bronze)}</td>
-                        <td>{this.renderInfo('', Total_medailles)}</td>
-                        <td>{this.renderInfo('', Classement)}</td>
+                        <td>{this.renderInfo(Pays)}</td>
+                        <td>{this.renderInfo(Or)}</td>
+                        <td>{this.renderInfo(Argent)}</td>
+                        <td>{this.renderInfo(Bronze)}</td>
+                        <td>{this.renderInfo(Total_medailles)}</td>
+                        <td>{this.renderInfo(Classement)}</td>
                     </tr>
            
            )

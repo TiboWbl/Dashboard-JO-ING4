@@ -34,31 +34,19 @@
 
 .infoLine2 {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 5px;
-    color: white;
-    text-align: center;
+    color: rgb(56, 29, 157);
+    justify-content: center;
+    
 }
 
 .infoLabel2 {
-    color:white;
-    margin-right: 5px;
-    font-weight: 700;
-    text-align: center;
+    color:rgb(192, 32, 32);
+    justify-content: space-between;
+    text-align: start;
 }
 
-.infos2 {
-    width: 100%;
-    margin-bottom: 5px;
-    color: white;
-    text-align: center;
-}
 
-.info2 {
-    color:black;
-    justify-content: center;
-    text-align: left;
-}
 
 img {
     width: 150px;
@@ -73,5 +61,6 @@ img {
     top: 255px;
     background-color: white;
     border-radius: 10px;
+    
 }
 
