@@ -8,6 +8,7 @@ import App from '../../App';
 import Athlete from '../sportif/athlete';
 import Pays from '../medal/pays';
 import Navbar from '../navbar/navbar';
+import Camembert from '../graphe/camembert';
 
 export default class Dashboard extends React.Component {
     render() {
@@ -23,6 +24,7 @@ export default class Dashboard extends React.Component {
                 </td>
                 <Athlete />
                 <Pays />
+                <Camembert />
                 
                
             </div>
