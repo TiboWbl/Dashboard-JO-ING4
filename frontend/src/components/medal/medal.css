@@ -51,7 +51,7 @@ img {
 }
 
 .romain{
-    margin : 1px;
+    margin : 8px;
 }
 
 th, td {
@@ -64,6 +64,7 @@ th, td {
     border-radius: 10px;
     height: 285px;
     overflow-y: auto;
+    overflow-x:hidden;
 }
 
 .medals::-webkit-scrollbar {

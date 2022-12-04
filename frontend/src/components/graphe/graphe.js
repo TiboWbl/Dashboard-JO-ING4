@@ -29,15 +29,8 @@ class Graphe extends React.Component {
               isLoaded: true,
               items: result
             });
-
-            console.log(this.state.items);
-            console.log("use");
-            console.log(this.state.items.graphes[0]);
         
         },
-          // Note: it's important to handle errors here
-          // instead of a catch() block so that we don't swallow
-          // exceptions from actual bugs in components.
 
           (error) => {
             this.setState({
@@ -109,18 +102,6 @@ class Graphe extends React.Component {
       
         ];
         return (
-           /*
-            //   <NbaWidget  data={datas} />
-           <div className="widget2">
-            
-            <p className="Titre">Resultats de la nuit</p>
-               
-                <div className="match">
-                <div className="logo1"></div>
-                    <div className="score"><p>{datas.graphes[0].sport1}  -  {datas.graphes[0].share1}</p></div>
-                </div>  
-           </div>
-           */
            <div className="co">
            <div className="k">
              <Chart

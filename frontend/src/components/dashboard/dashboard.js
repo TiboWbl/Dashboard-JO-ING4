@@ -10,6 +10,7 @@ import Pays from '../medal/pays';
 import Navbar from '../navbar/navbar';
 import Resultat from '../classement/resultat';
 import Graphe from '../graphe/graphe';
+import Audience from '../audience/audience';
 
 export default class Dashboard extends React.Component {
     render() {
@@ -35,6 +36,7 @@ export default class Dashboard extends React.Component {
                         </div>
                             <div className='dash'>
                                 <div className='widget1'>
+                                    <Audience />
                                     <p></p>
                                 </div>
 
@@ -49,14 +51,15 @@ export default class Dashboard extends React.Component {
                                 <Pays />
                                 <p></p>
                             </div>
-                            <div className='widget3'>
+                            <div className='widget4'>
+                                <Athlete />
                                 <p></p>
                             </div>
-                            <div className='widget3'>
+                            <div className='widget5'>
                                 <Graphe />
                                 <p></p>
                             </div>
-                            <div className='widget3'>
+                            <div className='widget6'>
                                 <Athlete />  
                                 <p></p>
                             </div>
