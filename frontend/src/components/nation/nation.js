@@ -59,15 +59,22 @@ class Nation extends React.Component {
             const categories = [datas.nations[0].hote, datas.nations[1].hote, datas.nations[2].hote, datas.nations[3].hote];
 
             return (
-                <Chart>
-                    <ChartTitle text="Units sold" />
+                <Chart style={{
+                    height: 270,
+                    width: 270,
+                    left: 23,
+                    top: 20,
+                  }}>
+                    <ChartTitle text="Nations participantes" />
                     <ChartCategoryAxis>
                         <ChartCategoryAxisItem categories={categories}>
-                            <ChartCategoryAxisTitle text="Months" />
+                            <ChartCategoryAxisTitle/>
                         </ChartCategoryAxisItem>
                     </ChartCategoryAxis>
                     <ChartSeries>
-                        <ChartSeriesItem type="bar" gap={2} spacing={0} data={firstSeries} />
+                        <ChartSeriesItem tooltip={{
+                     visible: true,
+                   }} type="bar" gap={2} spacing={0} data={firstSeries} />
                     </ChartSeries>
                 </Chart>
             );

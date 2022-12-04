@@ -87,21 +87,6 @@ export default class Add extends React.Component {
                     <input type="submit" value="Ajouter à la base de données !" onClick={this.addSportif}></input>
                 </div>
 
-
-
-                <div className='category'>
-                        <input
-                            type="text"
-                            id="addSportif"
-                            name="addSportif"
-                            onChange={this.addSportifInputChange}
-                            value={addSportifInputValue}
-                        />
-                        <Button text={'Add sportif'} onClick={this.addSportif} />
-                </div>
-
-
-
             </form>
       </html>
       )
