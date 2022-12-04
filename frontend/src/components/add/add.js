@@ -4,16 +4,17 @@ import Sportif from '../sportif/sportif';
 import axios from 'axios';
 import { map } from 'lodash';
 import '../../App.css';
+import './add.css';
 
 let BACKEND_BASE_URL = "http://localhost:3001/sportifs/";
 
 export default class Add extends React.Component {
   constructor() {
     super();
-    
+
     this.state = {
       sportifs: [],
-      addSportifInputValue: ''   
+      addSportifInputValue: ''
     }
   }
 
@@ -25,70 +26,80 @@ export default class Add extends React.Component {
     this.setState({ addSportifInputValue: event.target.value });
     console.log('value is:', event.target.value);
   };
-  
-  getList= () => {
-    axios.get(BACKEND_BASE_URL).then((data) => data.data && data.data.sportifs && this.setState({ sportifs: data.data.sportifs}));
+
+  getList = () => {
+    axios.get(BACKEND_BASE_URL).then((data) => data.data && data.data.sportifs && this.setState({ sportifs: data.data.sportifs }));
   }
-  
-  addSportif= () => {
+
+  addSportif = () => {
     axios.put(BACKEND_BASE_URL, { sportif: this.state.addFilmInputValue }).then((data) => this.getList());
   }
 
-  
-  deleteSportif= (nom) => {
+
+  deleteSportif = (nom) => {
     axios.delete(`${BACKEND_BASE_URL}/${nom}`).then((data) => this.getList());
   }
-  
+
   renderCategory = (label, action) => {
     return (<div>
-    <Button text={label} onClick={action} />
+      <Button text={label} onClick={action} />
     </div>)
   }
-  
-  render() {  
-    const { sportifs, addSportifInputValue} = this.state;
+
+  render() {
+    const { sportifs, addSportifInputValue } = this.state;
 
     return (
 
-
       <html>
-            <h1>Ajouter un sportif</h1>
-
-            <form action="/add" method="get" class="forme">
-                <div class="form">
-                    <label for="name">Nom de l'athlète : </label>
-                    <input type="text" name="name" id="name" required></input>
-                </div>
-                <div class="form">
-                    <label for="prenom">Prénom de l'athlète : </label>
-                    <input type="name" name="prenom" id="prenom" required></input>
-                </div>
-                <div class="form">
-                    <label for="age">Âge de l'athlète : </label>
-                    <input type="number" name="age" id="age" required></input>
-                </div>
-                <div class="form">
-                    <label for="sport">Sport de l'athlète : </label>
-                    <input type="name" name="sport" id="sport" required></input>
-                </div>
-                <div class="form">
-                    <label for="nationalite">Nationalité de l'athlète : </label>
-                    <input type="name" name="nationalite" id="nationalite" required></input>
-                </div>
-                <div class="form">
-                    <label for="taille">Taille de l'athlète : </label>
-                    <input type="number" name="taille" id="taille" required></input>
-                </div>
-                <div class="form">
-                    <label for="poids">Poids de l'athlète : </label>
-                    <input type="number" name="poids" id="poids" required></input>
-                </div>
-                <div class="form">
-                    <input type="submit" value="Ajouter à la base de données !" onClick={this.addSportif}></input>
-                </div>
-
-            </form>
+        <div class="login-box">
+          <h2>Ajouter des sportifs</h2>
+          <form>
+            <div class="user-box">
+              <input type="text" name="" required=""></input>
+                <label>Prénom</label>
+            </div>
+            <div class="user-box">
+              <input type="password" name="" required=""></input>
+                <label>Nom</label>
+            </div>
+            <div class="user-box">
+              <input type="text" name="" required=""></input>
+                <label>Age</label>
+            </div>
+            <div class="user-box">
+              <input type="text" name="" required=""></input>
+                <label>Sport</label>
+            </div>
+            <div class="user-box">
+              <input type="text" name="" required=""></input>
+                <label>Nationalité</label>
+            </div>
+            <div class="user-box">
+              <input type="text" name="" required=""></input>
+                <label>Taille "cm"</label>
+            </div>
+            <div class="user-box">
+              <input type="text" name="" required=""></input>
+                <label>Poids "kg"</label>
+            </div>
+            <a href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Submit
+            </a>
+            <a href="/">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Retour
+            </a>
+          </form>
+        </div>
       </html>
-      )
-    }
+    )
   }
+}
