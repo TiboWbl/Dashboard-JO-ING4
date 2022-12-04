@@ -131,7 +131,7 @@ class Graphe extends React.Component {
                }}
              >
                <ChartTitle text="Les sports les plus regardés" align="center"/>
-               <ChartLegend position="right" orientation="vertical" />
+               <ChartLegend position="right" orientation="vertical" align="end" />
                <ChartSeries>
                  <ChartSeriesItem
                    
