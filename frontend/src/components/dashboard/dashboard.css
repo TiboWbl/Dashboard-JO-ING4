@@ -1,9 +1,6 @@
 .dashboard {
-    width: 90%;
+    width: 100%;
     height: auto;
-    margin-right: 10%;
-    margin-left: 10%;
-    margin-top: 15px;
     border: solid;
     border-radius: 15px;
     background-color: #1b304a;
@@ -34,10 +31,10 @@
 
 .logo{
     position:absolute; 
-    width: 17%; 
+    width: 22%; 
     height: 80%; 
-    top: 10%; 
-    left: 41%; 
+    top: 12%; 
+    left: 38.9%; 
     z-index:2
 }
 
@@ -65,9 +62,9 @@
 
 .App {
     position:absolute;
-    width: 15%;
-    left: 42%;
-    top: 10px;
+    width: 19%;
+    left: 40.5%;
+    top: 20px;
     text-align: center;
     color: white;
     font-family:'Times New Roman', Times, serif;
@@ -90,7 +87,7 @@ img {
 .widget1{
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 73.5%;
     height: 100%;
     margin:5px;
     background-color: green;
@@ -110,11 +107,10 @@ img {
 .widget3{
     display: flex;
     flex-wrap: wrap;
-    width: 23%;
+    width: 23.5%;
     height: 100%;
-    margin:7px;
+    margin:8px;
     background-color: blue;
-    
 }
 
 

@@ -126,6 +126,7 @@ class Graphe extends React.Component {
              <Chart
                style={{
                  top: 40,
+                 left: 17,
                  height: 230,
                  width: 270,
                }}
