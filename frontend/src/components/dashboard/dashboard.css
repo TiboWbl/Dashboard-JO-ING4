@@ -1,5 +1,5 @@
 .dashboard {
-    width: 80%;
+    width: 90%;
     height: auto;
     margin-right: 10%;
     margin-left: 10%;
@@ -90,9 +90,11 @@ img {
 .widget1{
     display: flex;
     flex-wrap: wrap;
-    width: 74%;
+    width: 70%;
     height: 100%;
     margin:5px;
+    background-color: green;
+    
 }
 
 .widget2{
@@ -101,14 +103,18 @@ img {
     width: 24%;
     height: 100%;
     margin:7px;
+    background-color: red;
+   
 }
 
 .widget3{
     display: flex;
     flex-wrap: wrap;
-    width: 24%;
+    width: 23%;
     height: 100%;
     margin:7px;
+    background-color: blue;
+    
 }
 
 

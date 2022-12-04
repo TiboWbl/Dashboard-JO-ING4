@@ -54,6 +54,7 @@ export default class Dashboard extends React.Component {
                             </div>
                             <div className='widget3'>
                                 <Graphe />
+                                <p></p>
                             </div>
                             <div className='widget3'>
                                 <Athlete />  

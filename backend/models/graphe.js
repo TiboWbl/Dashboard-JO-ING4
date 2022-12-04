@@ -8,10 +8,18 @@ const grapheSchema = new mongoose.Schema({
     sport2 : String,
     sport3 : String,
     sport4 : String,
-    share1: Number,
-    share2: Number,
-    share3: Number,
-    share4: Number
+    sport6 : String,
+    sport7 : String,
+    sport8 : String,
+    sport11 : String,
+    share1: String,
+    share2: String,
+    share3: String,
+    share4: String,
+    share6: String,
+    share7: String,
+    share8: String,
+    share11: String
 }, {
     timestamps: true
 }

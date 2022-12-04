@@ -63,22 +63,48 @@ class Graphe extends React.Component {
           {
             name: datas.graphes[0].sport1,
             share: datas.graphes[0].share1,
-            color: "rgba(0, 0, 0, .5)",
+            color: "rgba(0, 128, 255, 1)",
           },
           {
             name: datas.graphes[0].sport2,
             share: datas.graphes[0].share2,
-            explode: true,
+            color: "rgba(255, 153, 153, 1)",
             
           },
           {
             name: datas.graphes[0].sport3,
             share: datas.graphes[0].share3,
+            color: "rgba(245, 0, 0, 1)",
+            explode: true,
             
           },
           {
             name: datas.graphes[0].sport4,
             share: datas.graphes[0].share4,
+            color: "rgba(0, 0, 245, 1)",
+          },
+          {
+            name: datas.graphes[0].sport6,
+            share: datas.graphes[0].share6,
+            color: "rgba(255, 128, 0, 1)",
+            
+          },
+          {
+            name: datas.graphes[0].sport7,
+            share: datas.graphes[0].share7,
+            color: "rgba(0, 245, 0, 1)",
+            
+          },
+          {
+            name: datas.graphes[0].sport8,
+            share: datas.graphes[0].share8,
+            color: "rgba(153, 0, 153, 1)",
+          },
+      
+          {
+            name: datas.graphes[0].sport11,
+            share: datas.graphes[0].share11,
+            color: "rgba(192, 192, 192, 1)",
           },
       
         ];
@@ -99,16 +125,19 @@ class Graphe extends React.Component {
            <div className="k">
              <Chart
                style={{
-                 height: 350,
+                 top: 40,
+                 height: 230,
+                 width: 270,
                }}
              >
-               <ChartTitle text="Stats sports" />
-               <ChartLegend position="bottom" orientation="horizontal" />
+               <ChartTitle text="Les sports les plus regardés" align="center"/>
+               <ChartLegend position="right" orientation="vertical" />
                <ChartSeries>
                  <ChartSeriesItem
-                   type="pie"
+                   
+                   type="donut"
                    overlay={{
-                     gradient: "roundedBevel",
+                     gradient: "glass",
                    }}
                    tooltip={{
                      visible: true,
