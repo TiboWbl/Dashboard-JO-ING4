@@ -29,7 +29,7 @@ export default class Sportif2 extends React.Component {
                     {this.renderInfo('Taille (cm)', taille)}
                     {this.renderInfo('Poids (kg)', poids)}
                 </div>
-                <button className="trash" type="submit" onClick={() => deleteSportif(nom)} > <i class="fa-solid fa-trash"></i> </button>           
+                <button className="trash"  onClick={() => deleteSportif(nom)} > <i class="fa-solid fa-trash"></i> </button>           
             </div>
             )
     }

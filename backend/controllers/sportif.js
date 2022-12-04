@@ -99,9 +99,8 @@ exports.addSportif = (req, res) => {
 exports.deleteOne = (req, res) => {
     // Get the :id of the sportif we want to delete from the params of the request
     const { nom } = req.params;
-    let sportifs = [];
     
-    Sportifs.deleteOne({"nom" : nom }).then((sportifs) => {
+    Sportifs.deleteOne({ "nom" : nom }).then((sportifs) => {
         res.status(200).json({ 
             sportifs,
             message: `${sportifs} deleted !` 

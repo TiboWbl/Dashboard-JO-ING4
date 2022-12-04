@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '../button/button';
-import Sportif from '../sportif/sportif';
 import axios from 'axios';
 import { map } from 'lodash';
 import '../../App.css';
@@ -35,9 +34,8 @@ export default class Tout extends React.Component {
     axios.put(BACKEND_BASE_URL, { sportif: this.state.addFilmInputValue }).then((data) => this.getList());
   }
 
-  
-  deleteSportif= (id) => {
-    axios.delete(`${BACKEND_BASE_URL}/${id}`).then((data) => this.getList());
+  deleteSportif= (nom) => {
+    axios.delete(`${BACKEND_BASE_URL}${nom}`).then((data) => this.getList());
   }
   
   renderCategory = (label, action) => {
@@ -48,11 +46,6 @@ export default class Tout extends React.Component {
   
   render() {  
     const { sportifs, addFilmInputValue} = this.state;
-
-    /*async function refresh(event)  {
-
-      BACKEND_BASE_URL = "http://localhost:3001/sportifs/";
-    }*/
 
     async function handlesubmit(event)  {
         event.preventDefault();
@@ -77,7 +70,8 @@ export default class Tout extends React.Component {
                     <button className="refresh2" type="submit"  ><i class="gg-search"></i></button>
                     {this.renderCategory('Actualiser', this.getList)}
               </form>
-                {map(sportifs, (sport, index) => <Sportif2 key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['_id'])}/>)}
+                {map(sportifs, (sport, index) => <Sportif2 key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['nom'])}/>)}
+                
               <div className='sportif'> 
                   <div className='infos'>
                     <form action="/add">
