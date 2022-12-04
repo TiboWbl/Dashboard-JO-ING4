@@ -11,6 +11,7 @@ import Navbar from '../navbar/navbar';
 import Resultat from '../classement/resultat';
 import Graphe from '../graphe/graphe';
 import Audience from '../audience/audience';
+import Nation from '../nation/nation';
 
 export default class Dashboard extends React.Component {
     render() {
@@ -52,7 +53,7 @@ export default class Dashboard extends React.Component {
                                 <p></p>
                             </div>
                             <div className='widget4'>
-                                <Athlete />
+                                <Nation />
                                 <p></p>
                             </div>
                             <div className='widget5'>

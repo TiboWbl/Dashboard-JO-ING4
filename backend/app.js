@@ -12,6 +12,7 @@ var medalsRouter = require("./routes/medals");
 var graphesRouter = require("./routes/graphes");
 var classementsRouter = require("./routes/classements");
 var audiencesRouter = require("./routes/audiences");
+var nationsRouter = require("./routes/nations");
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use("/medals",medalsRouter);
 app.use("/graphes",graphesRouter);
 app.use("/classements",classementsRouter);
 app.use("/audiences",audiencesRouter);
+app.use("/nations",nationsRouter);
 
 
 // catch 404 and forward to error handler
