@@ -66,7 +66,7 @@ export default class Tout extends React.Component {
 
         <div className='toutsportifs'>
               <form class="test2" onSubmit={handlesubmit}>
-                <input placeholder="Entrez le sportif..." required="required" size="15" className="id2" type="id" name="id" id="id"></input>
+                <input placeholder="Rechercher un sportif..." required="required" size="15" className="id2" type="id" name="id" id="id"></input>
                     <button className="refresh2" type="submit"  ><i class="gg-search"></i></button>
                     {this.renderCategory('Actualiser', this.getList)}
               </form>

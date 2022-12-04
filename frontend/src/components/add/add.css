@@ -10,19 +10,9 @@
     color: whitesmoke;
 }
 
-html {
-    height: 100%;
-  }
-  body {
-    margin:0;
-    padding:0;
-    font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
-  }
-  
   .login-box {
-    position: absolute;
-    top: 50%;
+    position:absolute;
+    top: 70%;
     left: 50%;
     width: 400px;
     padding: 40px;
