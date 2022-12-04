@@ -4,7 +4,6 @@ import '../../App.css';
 import fond1 from '../../img/fond1.jpg';
 import fond2 from '../../img/fond2.jpg';
 import logo from '../../img/logo.png';
-import App from '../../App';
 import Athlete from '../sportif/athlete';
 import Pays from '../medal/pays';
 import Navbar from '../navbar/navbar';
@@ -35,7 +34,8 @@ export default class Dashboard extends React.Component {
                             <img class="logo" src={logo} alt='' />
                         
                         </div>
-                            <div className='dash'>
+                        
+                        <div className='dash'>
                                 <div className='widget1'>
                                     <Audience />
                                     <p></p>
@@ -44,9 +44,9 @@ export default class Dashboard extends React.Component {
                                 <div className='widget2'>
                                     <Resultat />
                                 </div>
-                            </div>
+                        </div>
 
-                            <div className='dash'>
+                        <div className='dash2'>
                             
                             <div className='widget3'>
                                 <Pays />
@@ -65,7 +65,7 @@ export default class Dashboard extends React.Component {
                                 <p></p>
                             </div>
                         
-                            </div>
+                         </div>
                     </div>
                 
                 </div>

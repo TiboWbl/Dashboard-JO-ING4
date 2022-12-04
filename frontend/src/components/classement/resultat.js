@@ -70,7 +70,7 @@ export default class Resultat extends React.Component {
         
       <div>
 
-       <div className='sportifs'>
+       <div className='sportifs2'>
        <form class="test" onSubmit={handlesubmit2}>
           <input placeholder="Entrez le sport..." required="required" size="15" className="id" type="id" name="id" id="id" pattern="[A-Za-z0-9]{1,20}"></input>
           <button className="refresh" type="submit"  ><i class="gg-search"></i></button>

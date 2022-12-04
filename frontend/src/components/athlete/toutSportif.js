@@ -73,7 +73,7 @@ export default class Tout extends React.Component {
                 {map(sportifs, (sport, index) => <Sportif2 key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['nom'])}/>)}
                 
               <div className='sportif'> 
-                  <div className='infos'>
+                  <div className='infos2'>
                     <form action="/add">
                         <button className="plus" type="submit"  ><i class="fa fa-plus" aria-hidden="true"></i></button>
                     </form>

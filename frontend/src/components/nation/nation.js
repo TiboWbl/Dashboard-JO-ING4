@@ -60,10 +60,10 @@ class Nation extends React.Component {
 
             return (
                 <Chart style={{
-                    height: 270,
+                    height: 282,
                     width: 270,
                     left: 23,
-                    top: 20,
+                    top: 16,
                   }}>
                     <ChartTitle text="Nations participantes" />
                     <ChartCategoryAxis>

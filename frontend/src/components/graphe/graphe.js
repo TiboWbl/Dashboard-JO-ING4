@@ -106,17 +106,16 @@ class Graphe extends React.Component {
            <div className="k">
              <Chart
                style={{
-                 top: 40,
+                 top: 19,
                  left: 17,
-                 height: 230,
+                 height: 282,
                  width: 270,
                }}
              >
-               <ChartTitle text="Les sports les plus regardés" align="center"/>
-               <ChartLegend position="right" orientation="vertical" align="end" />
+               <ChartTitle text="Les sports les plus regardés" align="center" />
+               <ChartLegend position="right" orientation="vertical" align="middle" />
                <ChartSeries>
-                 <ChartSeriesItem
-                   
+                 <ChartSeriesItem   
                    type="donut"
                    overlay={{
                      gradient: "glass",
