@@ -5,6 +5,7 @@ import axios from 'axios';
 import { map } from 'lodash';
 import '../../App.css';
 import './add.css';
+import Navbar from '../navbar/navbar';
 
 let BACKEND_BASE_URL = "http://localhost:3001/sportifs/";
 
@@ -52,8 +53,11 @@ export default class Add extends React.Component {
     return (
 
       <html>
+        <div>
+              <Navbar />  
+        </div>
         <div class="login-box">
-          <h2>Ajouter des sportifs</h2>
+          <h2>Ajouter un sportif</h2>
           <form>
             <div class="user-box">
               <input type="text" name="" required=""></input>
@@ -65,7 +69,7 @@ export default class Add extends React.Component {
             </div>
             <div class="user-box">
               <input type="text" name="" required=""></input>
-                <label>Age</label>
+                <label>Âge</label>
             </div>
             <div class="user-box">
               <input type="text" name="" required=""></input>
@@ -77,11 +81,11 @@ export default class Add extends React.Component {
             </div>
             <div class="user-box">
               <input type="text" name="" required=""></input>
-                <label>Taille "cm"</label>
+                <label>Taille (cm)</label>
             </div>
             <div class="user-box">
               <input type="text" name="" required=""></input>
-                <label>Poids "kg"</label>
+                <label>Poids (kg)</label>
             </div>
             <a href="#">
               <span></span>
@@ -90,15 +94,16 @@ export default class Add extends React.Component {
               <span></span>
               Submit
             </a>
-            <a href="/">
+            <a className='retour' href="/api">
               <span></span>
               <span></span>
               <span></span>
               <span></span>
               Retour
             </a>
-          </form>
+          </form>    
         </div>
+        <div className='espacement'><p> </p></div>
       </html>
     )
   }
