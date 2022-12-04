@@ -34,7 +34,6 @@ export default class Athlete extends React.Component {
     axios.put(BACKEND_BASE_URL, { sportif: this.state.addFilmInputValue }).then((data) => this.getList());
   }
 
-  
   deleteSportif= (nom) => {
     axios.delete(`${BACKEND_BASE_URL}/${nom}`).then((data) => this.getList());
   }
@@ -48,11 +47,6 @@ export default class Athlete extends React.Component {
   render() {  
     const { sportifs, addFilmInputValue} = this.state;
 
-    /*async function refresh(event)  {
-
-      BACKEND_BASE_URL = "http://localhost:3001/sportifs/";
-    }*/
-
     async function handlesubmit(event)  {
         event.preventDefault();
         const id=event.target.id.value;
@@ -61,25 +55,21 @@ export default class Athlete extends React.Component {
 
     return (
 
-
       <html>
-        <head>
-            
-        <link href='https://css.gg/search.css' rel='stylesheet'></link>
+        <head>    
+            <link href='https://css.gg/search.css' rel='stylesheet'></link>
         </head>
         
-      <div>
-
-       <div className='sportifs'>
-       <form class="test" onSubmit={handlesubmit}>
-          <input placeholder="Entrez le sportif..." required="required" size="15" className="id" type="id" name="id" id="id" pattern="[A-Za-z0-9]{1,20}"></input>
-          <button className="refresh" type="submit"  ><i class="gg-search"></i></button>
-          {this.renderCategory('Actualiser', this.getList)}
-        </form>
-          {map(sportifs, (sport, index) => <Sportif key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['_id'])}/>)}
+        <div>
+            <div className='sportifs'>
+                <form class="test" onSubmit={handlesubmit}>
+                    <input placeholder="Entrez le sportif..." required="required" size="15" className="id" type="id" name="id" id="id" pattern="[A-Za-z0-9]{1,20}"></input>
+                    <button className="refresh" type="submit"  ><i class="gg-search"></i></button>
+                    {this.renderCategory('Actualiser', this.getList)}
+                </form>
+                  {map(sportifs, (sport, index) => <Sportif key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['_id'])}/>)}
+              </div>  
         </div>
-        
-      </div>
       </html>
       )
     }

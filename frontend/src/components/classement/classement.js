@@ -1,7 +1,4 @@
 import React from 'react';
-import Button from '../button/button';
-// eslint-disable-next-line
-import { map, split } from 'lodash';
 
 export default class Classement extends React.Component {
     renderInfo(label, info) {
@@ -12,9 +9,8 @@ export default class Classement extends React.Component {
     }
 
     render() {
-        const { infos, deleteClassement } = this.props;
-        //console.log(infos);
-        const { _id, discipline, nationalite, sportif, temps1, nationalite2, sportive, temps2 } = infos;
+        const { infos } = this.props;
+        const { discipline, nationalite, sportif, temps1, nationalite2, sportive, temps2 } = infos;
 
         return (
             <div className='sportif'>    

@@ -29,7 +29,6 @@ export default class Pays extends React.Component {
     axios.delete(`${BACKEND_BASE_URL2}/${id}`).then((data) => this.getList());
   }
   
-  
   renderCategory = (label, action) => {
     return (<div>
     <Button text={label} onClick={action} />
@@ -37,12 +36,11 @@ export default class Pays extends React.Component {
   }
   
   render() {  
-    const { medals, addFilmInputValue} = this.state;
+    const { medals } = this.state;
 
     return (
-
       <div>
-       <div className='medals'>
+          <div className='medals'>
             <table className='romain'>
                     <thead>
                         <tr>
@@ -57,8 +55,7 @@ export default class Pays extends React.Component {
                     <br/>
                       {map(medals, (medaille, index) => <Medal key={`medaille-${index}`} infos={medaille} deleteMedals={() => this.deleteMedals(medaille['_id'])}/>)}          
             </table>
-        </div>
-        
+          </div> 
       </div>
       )
     }

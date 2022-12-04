@@ -1,7 +1,4 @@
 import React from 'react';
-import Button from '../button/button';
-import { map, split } from 'lodash';
-
 import './medal.css'
 import '../../App.css';
 
@@ -14,8 +11,8 @@ export default class Medal extends React.Component {
     }
 
     render() {
-        const { infos, deleteMedal } = this.props;
-        const { _id, Pays, Or, Argent, Bronze, Classement, Total_medailles } = infos;
+        const { infos } = this.props;
+        const { Pays, Or, Argent, Bronze, Classement, Total_medailles } = infos;
 
         return (
                     <tr>

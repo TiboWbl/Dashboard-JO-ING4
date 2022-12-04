@@ -54,8 +54,6 @@ export default class Tout extends React.Component {
     }
 
     return (
-
-
       <html>
         <head>
             

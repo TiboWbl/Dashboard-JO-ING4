@@ -5,22 +5,18 @@ const Sportifs = require('../models/sportif');
 
 exports.findAll = (req, res) => {
     Sportifs.find({}).then((sportifs)=>{
-        // Get List of movie and return JSON
         res.status(200).json({ sportifs });
     })  
 }
 
 exports.findOne = (req, res) => {
     const { nom } = req.params;
-    // Find sportif which has [id] name in DB
-    //console.log({ sportif: nom });
     let sportifs = [];
     Sportifs.findOne({ "nom" : nom })
     
     .then(test => {
         
         if(test) {
-            // Return sportif
             sportifs.push(test);
             res.status(200).json({
                 
@@ -47,17 +43,14 @@ exports.findOne = (req, res) => {
 }
 
 exports.addSportif = (req, res) => {
-    //const { Nom, Prenom, Age, Nationalite, Sport, Taille, Poids  } = req.params;
     console.log('prout');
     console.log(req.params);
     console.log(req.body);
     
     axios.get(url)
     .then((data) => {
-        // handle success
         if(data.data){
             const newSportif = {
-                // _id: _.uniqueId(), // Fait par Mongodb
                 nom: Nom,
                 prenom: Prenom,
                 age: Age, 
@@ -70,7 +63,6 @@ exports.addSportif = (req, res) => {
             Sportifs.create(newSportif).then(sportif => {
                 console.error(sportif);
                 if(sportif) {
-                    // Return validation message
                     res.status(200).json({
                         message: `Just added ${Nom}`,
                         sportif: { newSportif },
@@ -89,7 +81,6 @@ exports.addSportif = (req, res) => {
         }
     })
     .catch(function (error) {
-        // handle error
         res.json({error, 
             sportif: Sportifs
         });
@@ -97,7 +88,6 @@ exports.addSportif = (req, res) => {
 }
 
 exports.deleteOne = (req, res) => {
-    // Get the :id of the sportif we want to delete from the params of the request
     const { nom } = req.params;
     
     Sportifs.deleteOne({ "nom" : nom }).then((sportifs) => {
@@ -112,16 +102,12 @@ exports.deleteOne = (req, res) => {
     })
 }
 
-// Pas encore testé
 exports.modifySportif = (req, res) => {
-    // Get the :id of the sportif we want to update from the params of the request
     const { id } = req.params;
-    // Get the new data of the sportif we want to update from the body of the request
     const { sportif } = req.body;
 
 
     Sportifs.findByIdAndUpdate(id, { ...sportif }).then(()=> {
-        // Return message
         res.json({
           message: `Sportif updated: ${sportif}`
         });

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import '@progress/kendo-theme-default/dist/all.css';
 import {
     Chart,
@@ -43,9 +42,9 @@ class Audience extends React.Component {
     }
   
     render() {
-      const { error, isLoaded, items } = this.state;
+      const { error, isLoaded } = this.state;
       const datas = this.state.items;
-      const test = "oui";
+
       if (error) {
         return <div>Error: {error.message}</div>;
       } else if (!isLoaded) {

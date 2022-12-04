@@ -1,7 +1,4 @@
 import React from 'react';
-import Button from '../button/button';
-// eslint-disable-next-line
-import { map, split } from 'lodash';
 import '../sportif/sportif.css';
 
 export default class Sportif2 extends React.Component {
@@ -14,8 +11,7 @@ export default class Sportif2 extends React.Component {
 
     render() {
         const { infos, deleteSportif } = this.props;
-        //console.log(infos);
-        const { _id, age, nationalite, nom, poids, prenom, sport, taille } = infos;
+        const { age, nationalite, nom, poids, prenom, sport, taille } = infos;
 
         return (
             <div className='sportif'>

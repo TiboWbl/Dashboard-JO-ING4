@@ -5,21 +5,18 @@ const Medals = require('../models/medal');
 
 exports.findAll = (req, res) => {
     Medals.find({}).then((medals)=>{
-        // Get List of medals and return JSON
         res.status(200).json({ medals });
     })  
 }
 
 exports.findOne = (req, res) => {
     const { Pays } = req.params;
-
     let medals = [];
     Medals.findOne({ "Pays" : Pays })
     
     .then(test => {
         
         if(test) {
-            // Return medal
             medals.push(test);
             res.status(200).json({
                 

@@ -6,9 +6,7 @@ export default class Api extends React.Component {
     render() {
         return (
             <div>
-                <Navbar />
-                <br/>
-                <br/>
+                <Navbar /><br/><br/>
                 <Tout />   
             </div>);
     }

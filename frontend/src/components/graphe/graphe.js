@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import '@progress/kendo-theme-default/dist/all.css';
 import {
   Chart,
@@ -24,12 +23,10 @@ class Graphe extends React.Component {
         .then(res => res.json())
         .then(
           (result) => {
-            
             this.setState({
               isLoaded: true,
               items: result
             });
-        
         },
 
           (error) => {
@@ -43,10 +40,8 @@ class Graphe extends React.Component {
   
     render() {
 
-
-      const { error, isLoaded, items } = this.state;
+      const { error, isLoaded } = this.state;
       const datas = this.state.items;
-      const test = "oui";
       if (error) {
         return <div>Error: {error.message}</div>;
       } else if (!isLoaded) {
@@ -103,34 +98,34 @@ class Graphe extends React.Component {
         ];
         return (
            <div className="co">
-           <div className="k">
-             <Chart
-               style={{
-                 top: 19,
-                 left: 17,
-                 height: 282,
-                 width: 270,
-               }}
-             >
-               <ChartTitle text="Les sports les plus regardés" align="center" />
-               <ChartLegend position="right" orientation="vertical" align="middle" />
-               <ChartSeries>
-                 <ChartSeriesItem   
-                   type="donut"
-                   overlay={{
-                     gradient: "glass",
-                   }}
-                   tooltip={{
-                     visible: true,
-                   }}
-                   data={pieData}
-                   categoryField="name"
-                   field="share"
-                   color="color"
-                 />
-               </ChartSeries>
-             </Chart>
-           </div>
+            <div className="k">
+              <Chart
+                style={{
+                  top: 19,
+                  left: 17,
+                  height: 282,
+                  width: 270,
+                }}
+              >
+                <ChartTitle text="Les sports les plus regardés" align="center" />
+                <ChartLegend position="right" orientation="vertical" align="middle" />
+                <ChartSeries>
+                  <ChartSeriesItem   
+                    type="donut"
+                    overlay={{
+                      gradient: "glass",
+                    }}
+                    tooltip={{
+                      visible: true,
+                    }}
+                    data={pieData}
+                    categoryField="name"
+                    field="share"
+                    color="color"
+                  />
+                </ChartSeries>
+              </Chart>
+            </div>
          </div>
         );
       }

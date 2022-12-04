@@ -20,20 +20,10 @@ export default class Resultat extends React.Component {
   componentDidMount() {
     this.getList();
   }
-
-  addFilmInputChange = event => {
-    this.setState({ addFilmInputValue: event.target.value });
-    console.log('value is:', event.target.value);
-  };
   
   getList= () => {
     axios.get(BACKEND_BASE_URL4).then((data) => data.data && data.data.classements && this.setState({ classements: data.data.classements}));
   }
-  
-  addClassement= () => {
-    axios.put(BACKEND_BASE_URL4, { Classement: this.state.addFilmInputValue }).then((data) => this.getList());
-  }
-
   
   deleteClassement= (discipline) => {
     axios.delete(`${BACKEND_BASE_URL4}/${discipline}`).then((data) => this.getList());
@@ -48,11 +38,6 @@ export default class Resultat extends React.Component {
   render() {  
     const { classements, addFilmInputValue} = this.state;
 
-    /*async function refresh(event)  {
-
-      BACKEND_BASE_URL = "http://localhost:3001/sportifs/";
-    }*/
-
     async function handlesubmit2(event)  {
         event.preventDefault();
         const id=event.target.id.value;
@@ -61,25 +46,21 @@ export default class Resultat extends React.Component {
 
     return (
 
-
       <html>
-        <head>
-            
-        <link href='https://css.gg/search.css' rel='stylesheet'></link>
-        </head>
-        
-      <div>
-
-       <div className='sportifs2'>
-       <form class="test" onSubmit={handlesubmit2}>
-          <input placeholder="Entrez le sport..." required="required" size="15" className="id" type="id" name="id" id="id" pattern="[A-Za-z0-9]{1,20}"></input>
-          <button className="refresh" type="submit"  ><i class="gg-search"></i></button>
-          {this.renderCategory('Actualiser', this.getList)}
-        </form>
-          {map(classements, (classement, index) => <Classement key={`classement-${index}`} infos={classement} deleteClassement={() => this.deleteClassement(classement['_id'])}/>)}
-        </div>
-        
-      </div>
+          <head>  
+              <link href='https://css.gg/search.css' rel='stylesheet'></link>
+          </head>
+          
+          <div>
+              <div className='sportifs2'>
+                 <form class="test" onSubmit={handlesubmit2}>
+                    <input placeholder="Entrez le sport..." required="required" size="15" className="id" type="id" name="id" id="id" pattern="[A-Za-z0-9]{1,20}"></input>
+                    <button className="refresh" type="submit"  ><i class="gg-search"></i></button>
+                    {this.renderCategory('Actualiser', this.getList)}
+                 </form>
+                  {map(classements, (classement, index) => <Classement key={`classement-${index}`} infos={classement} deleteClassement={() => this.deleteClassement(classement['_id'])}/>)}
+               </div>
+          </div>
       </html>
       )
     }
