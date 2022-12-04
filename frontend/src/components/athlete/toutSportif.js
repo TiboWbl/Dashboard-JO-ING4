@@ -45,7 +45,7 @@ export default class Tout extends React.Component {
   }
   
   render() {  
-    const { sportifs, addFilmInputValue} = this.state;
+    const { sportifs } = this.state;
 
     async function handlesubmit(event)  {
         event.preventDefault();

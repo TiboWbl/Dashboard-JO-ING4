@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import '@progress/kendo-theme-default/dist/all.css';
 import {
   Chart,
