@@ -62,7 +62,7 @@ class Audience extends React.Component {
                 width: 780,
                 left: 18,
               }}>
-            <ChartTitle text="Audiences (en millions de téléspectateurs)" />
+            <ChartTitle text="&#128250; Audiences (en millions de téléspectateurs)" />
             <ChartCategoryAxis>
               <ChartCategoryAxisItem
                 categories={categories}

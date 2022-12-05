@@ -65,7 +65,7 @@ class Nation extends React.Component {
                     left: 23,
                     top: 16,
                   }}>
-                    <ChartTitle text="Nations participantes" />
+                    <ChartTitle text="Nations participantes &#128205;" />
                     <ChartCategoryAxis>
                         <ChartCategoryAxisItem categories={categories}>
                             <ChartCategoryAxisTitle/>

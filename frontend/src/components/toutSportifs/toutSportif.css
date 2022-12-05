@@ -58,3 +58,14 @@
 .plus:hover{
     cursor: pointer;
 }
+
+.rechercher{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    font-style: italic;
+    width: 200px;
+    height: 30px;
+}
