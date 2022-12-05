@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../navbar/navbar';
-import Tout from '../athlete/toutSportif';
+import Tout from '../toutSportifs/toutSportif';
 
 export default class Api extends React.Component {
     render() {

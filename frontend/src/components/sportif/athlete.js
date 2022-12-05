@@ -3,7 +3,6 @@ import Button from '../button/button';
 import Sportif from './sportif';
 import axios from 'axios';
 import { map } from 'lodash';
-import '../../App.css';
 
 let BACKEND_BASE_URL = "http://localhost:3001/sportifs/Riner";
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import './medal.css'
-import '../../App.css';
 
 export default class Medal extends React.Component {
     renderInfo(label, info) {

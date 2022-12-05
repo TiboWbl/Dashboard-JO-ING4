@@ -13,6 +13,28 @@
     box-shadow: inset 0 0 5px rgba(0, 0, 0, .5);
 }
 
+.sportifs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.refresh {
+    padding: 3px 3px;
+    margin: 5px;
+    font-size: 20px;
+    border-color: #1b304a;
+    width: 20px;
+    height: 25px;
+    background-color: #1b304a;
+    border: none;
+}
+
+.refresh:hover{
+    cursor: pointer;
+}
+
 .infoLine {
     display: flex;
     justify-content: space-between;
@@ -24,18 +46,13 @@
     font-weight: 700;
 }
 
+.info {
+    text-align: right;
+}
+
 .infos {
     width: 100%;
     margin-bottom: 5px;
-}
-
-.infos2 {
-    width: 100%;
-    margin-bottom: 50%;
-}
-
-.info {
-    text-align: right;
 }
 
 img {
@@ -59,3 +76,10 @@ img {
     width: 200px;
     height: 30px;
 }
+  
+.test {
+    display: flex;
+    width: 200px;
+    height: 30px;
+}
+  

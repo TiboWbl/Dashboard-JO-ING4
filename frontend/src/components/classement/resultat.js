@@ -3,7 +3,7 @@ import Button from '../button/button';
 import Classement from './classement';
 import axios from 'axios';
 import { map } from 'lodash';
-import '../../App.css';
+import './classement.css';
 
 let BACKEND_BASE_URL4 = "http://localhost:3001/classements/100m";
 
@@ -36,7 +36,7 @@ export default class Resultat extends React.Component {
   }
   
   render() {  
-    const { classements, addFilmInputValue} = this.state;
+    const { classements } = this.state;
 
     async function handlesubmit2(event)  {
         event.preventDefault();
@@ -52,10 +52,10 @@ export default class Resultat extends React.Component {
           </head>
           
           <div>
-              <div className='sportifs2'>
+              <div className='vainqueurs'>
                  <form class="test" onSubmit={handlesubmit2}>
                     <input placeholder="Entrez le sport..." required="required" size="15" className="id" type="id" name="id" id="id" pattern="[A-Za-z0-9]{1,20}"></input>
-                    <button className="refresh" type="submit"  ><i class="gg-search"></i></button>
+                    <button className="refreshVainqueurs" type="submit"  ><i class="gg-search"></i></button>
                     {this.renderCategory('Actualiser', this.getList)}
                  </form>
                   {map(classements, (classement, index) => <Classement key={`classement-${index}`} infos={classement} deleteClassement={() => this.deleteClassement(classement['_id'])}/>)}

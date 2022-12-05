@@ -3,7 +3,6 @@ import Button from '../button/button';
 import Medal from './medal';
 import axios from 'axios';
 import { map } from 'lodash';
-import '../../App.css';
 
 let BACKEND_BASE_URL2 = "http://localhost:3001/medals";
 

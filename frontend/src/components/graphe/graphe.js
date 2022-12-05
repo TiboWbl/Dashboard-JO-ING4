@@ -97,6 +97,7 @@ class Graphe extends React.Component {
       
         ];
         return (
+          <div className='test'>
            <div className="co">
             <div className="k">
               <Chart
@@ -109,8 +110,8 @@ class Graphe extends React.Component {
               >
                 <ChartTitle text="Les sports les plus regardés" align="center" />
                 <ChartLegend position="right" orientation="vertical" align="middle" />
-                <ChartSeries>
-                  <ChartSeriesItem   
+                <ChartSeries >
+                  <ChartSeriesItem 
                     type="donut"
                     overlay={{
                       gradient: "glass",
@@ -127,6 +128,7 @@ class Graphe extends React.Component {
               </Chart>
             </div>
          </div>
+        </div>
         );
       }
     }

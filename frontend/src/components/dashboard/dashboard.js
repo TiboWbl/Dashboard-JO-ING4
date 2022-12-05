@@ -1,6 +1,5 @@
 import React from 'react';
 import './dashboard.css';
-import '../../App.css';
 import fond1 from '../../img/fond1.jpg';
 import fond2 from '../../img/fond2.jpg';
 import logo from '../../img/logo.png';

@@ -1,0 +1,60 @@
+.trash {
+    padding: 3px 3px;
+    margin: 5px;
+    font-size: 20px;
+    border-color: white;
+    width: 20px;
+    height: 25px;
+    background-color: white;
+    border: none;
+}
+  
+.trash:hover{
+    cursor: pointer;
+}
+
+.refresh2 {
+    padding: 3px 3px;
+    margin: 5px;
+    font-size: 20px;
+    border-color: #2b2a2a;
+    width: 20px;
+    height: 25px;
+    background-color: #2b2a2a;
+    border: none;
+}
+
+.refresh2:hover{
+    cursor: pointer;
+}
+
+.recherche {
+    display: flex;
+    width: 4000px;
+    height: 30px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+  
+.toutsportifs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ajouter {
+    width: 100%;
+    margin-bottom: 50%;
+}
+
+.plus {
+    margin-left: 34%;
+    margin-top: 45%;
+    font-size: 50px;
+    background-color: white;
+    border: none;
+}
+  
+.plus:hover{
+    cursor: pointer;
+}

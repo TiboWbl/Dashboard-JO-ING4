@@ -2,8 +2,8 @@ import React from 'react';
 import Button from '../button/button';
 import axios from 'axios';
 import { map } from 'lodash';
-import '../../App.css';
 import Sportif2 from './sportif2';
+import './toutSportif.css';
 
 let BACKEND_BASE_URL = "http://localhost:3001/sportifs/";
 
@@ -63,7 +63,7 @@ export default class Tout extends React.Component {
       <div>
 
         <div className='toutsportifs'>
-              <form class="test2" onSubmit={handlesubmit}>
+              <form class="recherche" onSubmit={handlesubmit}>
                 <input placeholder="Rechercher un sportif..." required="required" size="15" className="id2" type="id" name="id" id="id"></input>
                     <button className="refresh2" type="submit"  ><i class="gg-search"></i></button>
                     {this.renderCategory('Actualiser', this.getList)}
@@ -71,7 +71,7 @@ export default class Tout extends React.Component {
                 {map(sportifs, (sport, index) => <Sportif2 key={`sportif-${index}`} infos={sport} deleteSportif={() => this.deleteSportif(sport['nom'])}/>)}
                 
               <div className='sportif'> 
-                  <div className='infos2'>
+                  <div className='ajouter'>
                     <form action="/add">
                         <button className="plus" type="submit"  ><i class="fa fa-plus" aria-hidden="true"></i></button>
                     </form>

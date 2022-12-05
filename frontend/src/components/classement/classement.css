@@ -1,0 +1,17 @@
+.vainqueurs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 7%;
+}
+  
+.refreshVainqueurs {
+    padding: 3px 3px;
+    margin: 5px;
+    font-size: 20px;
+    border-color: #1b304a;
+    width: 20px;
+    height: 25px;
+    background-color: #1b304a;
+    border: none;
+}
