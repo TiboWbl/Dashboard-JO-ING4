@@ -20,9 +20,11 @@ Les instructions sont à retrouver dans le pdf instruction.pdf.
 
 **Le non respect de ces instructions entraînera des pertes de points alors prenez le temps de tout lire et de poser des questions si vous ne comprenez pas**
 
-## Rendus
+## --------Rendus-------- ##
 
 ## Sujet
+
+Grands puristes de sports en général, nous nous sommes logiquement orientés vers un sujet où tout l'art du sport en général est représenté : les Jeux Olympiques. C'est un sujet qui nous tient à coeur et avec l'arrivée des JO 2024 à Paris, nous avons décidé de retracer les moments importants des JO de Tokyo.
 
 ## Mock-up
 
@@ -30,7 +32,9 @@ Lien de notre Mock-Up Figma : https://www.figma.com/file/ZK7xBtKJaeihp9fBlAV7eY/
 
 ## Trello
 
-Lien de notre Trello : 
+Lien de notre Trello : https://trello.com/invite/b/5UoP67bA/ATTIc06ddd91a1cf2aad0b5ca1e0ce227359F1CD4217/reactjs
 
 ## Review du projet
+
+Nous sommes plutot fier du rendu final de notre projet. Nous avons pratiquement réalisé tout ce qui était demandé de faire. De plus, le projet a été très formateur pour nous et nous nous sommes bien amusés avec un domaine qui rassemble notre passion : le sport. Quelques petites déceptions tout de même sur le responsive et l'esthétique mais nous sommes malgré tout content du resultat.
 
