@@ -58,8 +58,8 @@ class Audience extends React.Component {
         
         return (
             <Chart style={{
-                height: 305,
-                width: 780,
+                height: 315,
+                width: 860,
                 left: 18,
               }}>
             <ChartTitle text="&#128250; Audiences (en millions de téléspectateurs)" />

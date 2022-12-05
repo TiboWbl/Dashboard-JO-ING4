@@ -19,12 +19,14 @@ export default class Classement extends React.Component {
 
                     <div className='titre'>
                         {this.renderInfo('Discipline:', discipline)}
+                        <br/>
                     </div>
                    
                     <div className='bleu'>
                         {this.renderInfo('Sportif:', sportif)}
                         {this.renderInfo('Nationalité:', nationalite)}
                         {this.renderInfo('Temps:', temps1)}
+                        <br/>
                     </div>
 
                     <div className='coral'>

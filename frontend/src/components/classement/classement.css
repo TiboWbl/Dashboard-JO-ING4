@@ -25,49 +25,41 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    width: 370px;
+    width: 200px;
     margin: 10px;
     padding: 20px;
     color: black;
-    height: 150px;
-    border: solid 1px gray;
-    border-radius: 10px;
+    border: solid 1px white;
+    border-radius: 5px;
     background-color: white;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .5);
 }
 
 .bleu{
     color:cornflowerblue;
-    padding-right: 60%;
-    padding-top: 5%;
 }
 
 .coral{
-    position: relative;
-    padding-left: 60%;
     color:coral;
-    bottom: 40%;
-}
-
-.titre{
-    width: 200px;
-    padding-left: 30%;
 }
 
 .infoLineClassement {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 5px;
 }
 
 .infoLabelClassement {
+    margin-right: 5px;
     font-weight: 700;
 }
 
 .infoClassement {
-    text-align: center;
+    text-align: right;
 }
 
 .infosClassement {
     width: 100%;
     margin-bottom: 5px;
 }
+
