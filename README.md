@@ -20,3 +20,17 @@ Les instructions sont à retrouver dans le pdf instruction.pdf.
 
 **Le non respect de ces instructions entraînera des pertes de points alors prenez le temps de tout lire et de poser des questions si vous ne comprenez pas**
 
+## Rendus
+
+## Sujet
+
+## Mock-up
+
+Lien de notre Mock-Up Figma : https://www.figma.com/file/ZK7xBtKJaeihp9fBlAV7eY/Projet-React?node-id=0%3A1&t=VG4BwKxsWloTOU7L-1
+
+## Trello
+
+Lien de notre Trello : 
+
+## Review du projet
+

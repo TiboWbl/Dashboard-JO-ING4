@@ -10,7 +10,7 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/api" element={<Api />} />
         <Route path="/add" element={<Add />} />
-        <Route path="**" element={<Dashboard />} />
+        <Route path="*" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );

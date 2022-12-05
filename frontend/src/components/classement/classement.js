@@ -3,9 +3,9 @@ import './classement.css';
 
 export default class Classement extends React.Component {
     renderInfo(label, info) {
-        return (<div className='infoLine'>
-            <div className='infoLabel'>{label}</div>
-            <div className='info'>{info}</div>
+        return (<div className='infoLineClassement'>
+            <div className='infoLabelClassement'>{label}</div>
+            <div className='infoClassement'>{info}</div>
         </div>);
     }
 
@@ -15,14 +15,24 @@ export default class Classement extends React.Component {
 
         return (
             <div className='champion'>    
-                <div className='infos'>
-                    {this.renderInfo('Discipline', discipline)}
-                    {this.renderInfo('Nationalité', nationalite)}
-                    {this.renderInfo('Sportif', sportif)}
-                    {this.renderInfo('Temps', temps1)}
-                    {this.renderInfo('Nationalité', nationalite2)}
-                    {this.renderInfo('Sportif', sportive)}
-                    {this.renderInfo('Temps', temps2)}   
+                <div className='infosClassement'>
+
+                    <div className='titre'>
+                        {this.renderInfo('Discipline:', discipline)}
+                    </div>
+                   
+                    <div className='bleu'>
+                        {this.renderInfo('Sportif:', sportif)}
+                        {this.renderInfo('Nationalité:', nationalite)}
+                        {this.renderInfo('Temps:', temps1)}
+                    </div>
+
+                    <div className='coral'>
+                        {this.renderInfo('Sportive:', sportive)}
+                        {this.renderInfo('Nationalité:', nationalite2)}
+                        {this.renderInfo('Temps:', temps2)}
+                    </div>
+        
                 </div>       
             </div>
             )

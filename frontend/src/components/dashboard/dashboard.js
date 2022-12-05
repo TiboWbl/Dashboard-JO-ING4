@@ -7,7 +7,7 @@ import Athlete from '../sportif/athlete';
 import Pays from '../medal/pays';
 import Navbar from '../navbar/navbar';
 import Resultat from '../classement/resultat';
-import Graphe from '../graphe/graphe';
+import Graphe from '../camembert/graphe';
 import Audience from '../audience/audience';
 import Nation from '../nation/nation';
 

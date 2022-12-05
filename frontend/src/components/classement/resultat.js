@@ -54,7 +54,7 @@ export default class Resultat extends React.Component {
           <div>
               <div className='vainqueurs'>
                  <form class="test" onSubmit={handlesubmit2}>
-                    <input placeholder="Entrez le sport..." required="required" size="15" className="id" type="id" name="id" id="id" pattern="[A-Za-z0-9]{1,20}"></input>
+                    <input placeholder="Entrez le sport..." required="required" size="15" className="id" type="id" name="id" id="id" pattern="[A-Za-z0-9 ]{1,20}"></input>
                     <button className="refreshVainqueurs" type="submit"  ><i class="gg-search"></i></button>
                     {this.renderCategory('Actualiser', this.getList)}
                  </form>
