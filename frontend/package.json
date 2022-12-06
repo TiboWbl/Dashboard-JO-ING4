@@ -8,6 +8,7 @@
     "@emotion/styled": "latest",
     "@mui/material": "^5.10.16",
     "@mui/styled-engine-sc": "^5.10.16",
+    "@progress/kendo-common": "^0.2.1",
     "@progress/kendo-licensing": "^1.2.2",
     "@progress/kendo-react-charts": "^5.9.0",
     "@progress/kendo-react-dateinputs": "^5.9.0",
