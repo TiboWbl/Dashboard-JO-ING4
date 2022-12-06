@@ -15,11 +15,14 @@ export default class Dashboard extends React.Component {
     render() {
         return (
             <div>
-                <div>
-                    <Navbar />
-                </div>
+                        <div>
+                            <Navbar />
+                        </div>
+
                 <div className='centrage'>
+
                     <div className="dashboard">
+
                         <div className="entete">
                             <div className='App'> 
                                 JEUX OLYMPIQUES TOKYO 2020
@@ -39,6 +42,7 @@ export default class Dashboard extends React.Component {
                                 </div>
                                 <div className='widget2'>
                                     <Resultat />
+                                    <p></p>
                                 </div>
                         </div>
 
@@ -58,12 +62,15 @@ export default class Dashboard extends React.Component {
                                 <Graphe />
                                 <p></p>
                             </div>
+                        
                             <div className='widget6'>
                                 <Athlete />  
                                 <p></p>
                             </div>
-                         </div>
-                         
+                        <div/>
+
+                      </div>
+
                     </div>
                 </div>
             </div>

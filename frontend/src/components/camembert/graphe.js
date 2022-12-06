@@ -94,6 +94,7 @@ class Graphe extends React.Component {
             share: datas.graphes[0].share11,
             color: "rgba(192, 192, 192, 1)",
           },
+          
       
         ];
         return (
@@ -105,9 +106,10 @@ class Graphe extends React.Component {
                   top: 19,
                   left: 17,
                   height: 282,
-                  width: 270,
+                  width: 270,              
                 }}
               >
+                
                 <ChartTitle text="Les sports les plus regardés &#128202;" align="center" />
                 <ChartLegend position="right" orientation="vertical" align="middle" />
                 <ChartSeries >
